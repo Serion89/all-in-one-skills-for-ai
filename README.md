@@ -1,6 +1,6 @@
 # All-in-One Skills for AI (`all-in-one-skills-for-ai`)
 
-An enterprise-grade, curated suite of 85 production-ready AI Agent Skills compliant with the open [Agent Skills Specification](https://agentskills.io). Built for cross-harness compatibility across Claude Code, Cursor, Windsurf, GitHub Copilot CLI, Antigravity, Cline, and Codex.
+An enterprise-grade, curated suite of 91 production-ready AI Agent Skills compliant with the open [Agent Skills Specification](https://agentskills.io). Built for cross-harness compatibility across Claude Code, Cursor, Windsurf, GitHub Copilot CLI, Antigravity, Cline, and Codex.
 
 ---
 
@@ -19,15 +19,15 @@ This collection provides a structured, multi-phase execution pipeline addressing
 graph TD
     A[Task Specification] --> B[Phase 1: Token & Context Optimization]
     B -->|Caveman + Ponytail| C[Phase 2: Architectural Alignment & Planning]
-    C -->|Superpowers + Matt Pocock + Manus Planning| D[Phase 3: Implementation & Craft]
-    D -->|Frontend Design + React Patterns + Systems Guild| E[Phase 4: Verification & Testing]
-    E -->|TDD + Addy Osmani Verification + Scientific Debugging| F[Phase 5: Infrastructure & SRE Audit]
-    F -->|Docker + K8s + Terraform + Bregman Incident Runbooks| G[Production Deployment]
+    C -->|Superpowers + Matt Pocock + DDIA + Manus Planning| D[Phase 3: Implementation & Craft]
+    D -->|Frontend Design + Impeccable + Systems Guild| E[Phase 4: Verification & Testing]
+    E -->|TDD + Addy Osmani Verification + Legacy Code Seams| F[Phase 5: Infrastructure & SRE Audit]
+    F -->|Docker + K8s + Terraform + Release It + SRE Runbooks| G[Production Deployment]
 ```
 
 ---
 
-## Skill Directory & Attribution Index (85 Skills)
+## Skill Directory & Attribution Index (91 Skills)
 
 <details open>
 <summary><b>1. Token Efficiency, Conciseness and Anti-Over-Engineering (14 Skills)</b></summary>
@@ -55,7 +55,7 @@ Focus: Strip conversational padding, minimize token burn, and enforce the "Lazy 
 </details>
 
 <details open>
-<summary><b>2. UI/UX, Frontend Design Systems and Visual Craft (9 Skills)</b></summary>
+<summary><b>2. UI/UX, Frontend Design Systems and Visual Craft (10 Skills)</b></summary>
 <br>
 
 Focus: Replace default AI aesthetics with intentional design systems, cohesive typography, and responsive fluidity.
@@ -63,6 +63,7 @@ Focus: Replace default AI aesthetics with intentional design systems, cohesive t
 | Skill Identifier | Purpose & Capabilities | Upstream Author & Origin |
 | :--- | :--- | :--- |
 | `frontend-design` | Overrides generic AI UI conventions; establishes distinct color palettes, font pairings, spatial tension, and layout systems. | [Anthropic](https://github.com/anthropics/skills) |
+| `impeccable` | Award-winning design director toolkit covering 20+ specialized playbooks: audits, micro-interactions, typography, and polish. | [Paul Bakaus](https://github.com/pbakaus/impeccable) |
 | `ui-ux-pro-max` | Comprehensive design intelligence database covering 57 UI paradigms, 95 industry palettes, and micro-interaction heuristics. | [NextLevelBuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
 | `design-system` | Generates tokenized CSS variables, typography ladders, fluid spacing scales, and reusable component contracts. | [NextLevelBuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
 | `ui-styling` | Production utility CSS and Tailwind configurations with responsiveness and dark-mode tokens. | [NextLevelBuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
@@ -75,7 +76,7 @@ Focus: Replace default AI aesthetics with intentional design systems, cohesive t
 </details>
 
 <details open>
-<summary><b>3. High-Level Thinking, Architecture and Complex Planning (26 Skills)</b></summary>
+<summary><b>3. High-Level Thinking, Architecture and Complex Planning (28 Skills)</b></summary>
 <br>
 
 Focus: Transform ad-hoc prompting into disciplined engineering methodology, persistent disk memory, and multi-agent execution.
@@ -92,6 +93,8 @@ Focus: Transform ad-hoc prompting into disciplined engineering methodology, pers
 | `requesting-code-review` | Compiles focused, context-aware review packets detailing intent, changes, and verification proof. | [Jesse Vincent (obra)](https://github.com/obra/superpowers) |
 | `receiving-code-review` | Systematically parses review comments and refactors code without defensive rationalization. | [Jesse Vincent (obra)](https://github.com/obra/superpowers) |
 | `planning-with-files` | Implements persistent markdown memory (`task_plan.md`, `findings.md`) on disk to prevent memory decay. | [Othman Adi](https://github.com/OthmanAdi/planning-with-files) |
+| `philosophy-of-software-design` | John Ousterhout's principles: deep modules with simple interfaces, information hiding, and defining errors out of existence. | [Ciembor / Ousterhout](https://github.com/ciembor/agent-rules-books) |
+| `pragmatic-programmer` | Craftsmanship principles: tracer bullets, orthogonality, broken windows, DRY, and deliberate engineering habits. | [Ciembor / Hunt & Thomas](https://github.com/ciembor/agent-rules-books) |
 | `wayfinder` | Navigates unfamiliar codebases with architectural reconnaissance and dependency graphing. | [Matt Pocock](https://github.com/mattpocock/skills) |
 | `to-spec` | Interrogates ambiguous product requirements and transforms them into strict, testable specifications. | [Matt Pocock](https://github.com/mattpocock/skills) |
 | `to-tickets` | Decomposes technical specifications into atomic, dependency-sequenced engineering tickets. | [Matt Pocock](https://github.com/mattpocock/skills) |
@@ -112,14 +115,15 @@ Focus: Transform ad-hoc prompting into disciplined engineering methodology, pers
 </details>
 
 <details open>
-<summary><b>4. Software Quality, Testing and Scientific Debugging (8 Skills)</b></summary>
+<summary><b>4. Software Quality, Testing and Scientific Debugging (9 Skills)</b></summary>
 <br>
 
-Focus: Scientific root-cause analysis, strict test-driven development, and clean code hygiene.
+Focus: Scientific root-cause analysis, strict test-driven development, legacy code refactoring, and clean code hygiene.
 
 | Skill Identifier | Purpose & Capabilities | Upstream Author & Origin |
 | :--- | :--- | :--- |
 | `clean-code` | Enforces structural readability, meaningful symbol naming, function purity, and single-responsibility boundaries. | Robert C. Martin ("Uncle Bob") |
+| `legacy-code-refactoring` | Michael Feathers's principles: finding code seams, writing characterization tests, and breaking dependencies safely. | [Ciembor / Feathers](https://github.com/ciembor/agent-rules-books) |
 | `code-reviewer` | Evaluates pull requests for race conditions, resource leaks, edge-case coverage, and API ergonomics. | Staff Reviewer Guild |
 | `systematic-debugging` | 4-phase diagnostic loop: Reproduce -> Isolate Root Cause -> Formulate Hypothesis -> Prove Resolution. | Systems Reliability Guild |
 | `test-driven-development` | Enforces the Red-Green-Refactor discipline: tests must fail before code implementation begins. | Kent Beck / TDD Core |
@@ -145,13 +149,14 @@ Focus: Idiomatic language features, memory safety, RAII, and zero-cost abstracti
 </details>
 
 <details open>
-<summary><b>6. Backend Architecture, Databases and DevSecOps (9 Skills)</b></summary>
+<summary><b>6. Backend Architecture, Databases and DevSecOps (10 Skills)</b></summary>
 <br>
 
-Focus: Resilient database layers, schema migration safety, security posture, and runtime profiling.
+Focus: Resilient database layers, distributed data intensive patterns, schema migration safety, security posture, and runtime profiling.
 
 | Skill Identifier | Purpose & Capabilities | Upstream Author & Origin |
 | :--- | :--- | :--- |
+| `data-intensive-applications` | Martin Kleppmann's DDIA principles: explicit consistency semantics, partition keys, replication lag, and stream processing. | [Ciembor / Kleppmann](https://github.com/ciembor/agent-rules-books) |
 | `system-design` | Calculates capacity constraints (QPS, IOPS, bandwidth), evaluates CAP/ACID trade-offs, and documents architectures. | [Pinchen](https://github.com/pinchen147/system-design-skill) |
 | `architect-review` | Audits system boundaries, domain models, interface coupling, and high-load failure modes. | Software Architecture Guild |
 | `api-and-interface-design` | Designs resilient REST, RPC, and GraphQL interfaces with idempotency, versioning, and rate limiting. | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
@@ -165,13 +170,14 @@ Focus: Resilient database layers, schema migration safety, security posture, and
 </details>
 
 <details open>
-<summary><b>7. DevOps, Cloud, Containers, SRE and Incident Runbooks (16 Skills)</b></summary>
+<summary><b>7. DevOps, Cloud, Containers, SRE and Incident Runbooks (17 Skills)</b></summary>
 <br>
 
-Focus: Infrastructure verification, container hardening, CI/CD pipeline integrity, and live SRE incident triage.
+Focus: Infrastructure verification, production stability patterns, container hardening, CI/CD pipeline integrity, and live SRE incident triage.
 
 | Skill Identifier | Purpose & Capabilities | Upstream Author & Origin |
 | :--- | :--- | :--- |
+| `production-stability-release-it` | Michael Nygard's Release It! patterns: circuit breakers, bulkheads, timeouts, steady state, and fail-fast architectures. | [Ciembor / Nygard](https://github.com/ciembor/agent-rules-books) |
 | `docker-review` | Hardens Dockerfiles using multi-stage builds, non-root users, layer caching, and minimal base images. | [Harshhaa](https://github.com/NotHarshhaa/devops-skills) |
 | `k8s-review` | Validates Kubernetes resources, Helm templates, PodSecurityStandards, resource quotas, and RBAC policies. | [Harshhaa](https://github.com/NotHarshhaa/devops-skills) |
 | `terraform-review` | Analyzes Infrastructure as Code (IaC) plans to prevent resource recreation, drift, and insecure security groups. | [Harshhaa](https://github.com/NotHarshhaa/devops-skills) |
@@ -197,7 +203,7 @@ Focus: Infrastructure verification, container hardening, CI/CD pipeline integrit
 
 ### Method 1: Global Deployment (Claude Code)
 
-To link all 85 skills into your user-level Claude Code environment:
+To link all 91 skills into your user-level Claude Code environment:
 
 ```bash
 git clone https://github.com/Serion89/all-in-one-skills-for-ai.git
@@ -236,6 +242,7 @@ cp -r path/to/all-in-one-skills-for-ai/skills/frontend-design .agents/skills/
 cp -r path/to/all-in-one-skills-for-ai/skills/planning-with-files .agents/skills/
 cp -r path/to/all-in-one-skills-for-ai/skills/caveman .agents/skills/
 cp -r path/to/all-in-one-skills-for-ai/skills/wayfinder .agents/skills/
+cp -r path/to/all-in-one-skills-for-ai/skills/data-intensive-applications .agents/skills/
 ```
 
 ---
