@@ -1,50 +1,142 @@
 <div align="center">
 
-<img src="assets/hero.svg" alt="All-In-One Skills For AI Hero Banner" width="100%">
-
-<a href="https://github.com/Serion89/all-in-one-skills-for-ai">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=15&duration=2400&pause=1000&color=58A6FF&center=true&vCenter=true&width=760&lines=Deterministic+Agentic+Harness+for+Claude+Code%2C+Cursor%2C+Windsurf+%26+Antigravity;115+Audited+Skills+%7C+12+Specialized+Domains+%7C+Zero+Opaque+Binaries;Token+Compression+%7C+Architectural+Invariants+%7C+SRE+Runbooks;Production-Hardened+Intelligence+for+Autonomous+Software+Engineering" alt="Typing SVG">
-</a>
+<img src="assets/hero.svg" alt="All-In-One Skills For AI Banner" width="100%">
 
 <p align="center">
   <a href="https://github.com/Serion89/all-in-one-skills-for-ai"><img src="https://img.shields.io/badge/skills-115%20verified-0d1117?style=flat-square&logo=git&logoColor=white&labelColor=161b22" alt="Skills"></a>
   <a href="https://agentskills.io"><img src="https://img.shields.io/badge/spec-agentskills.io-0d1117?style=flat-square&labelColor=161b22" alt="Spec"></a>
   <a href="#security--verification-standards"><img src="https://img.shields.io/badge/telemetry-zero-0d1117?style=flat-square&labelColor=161b22" alt="Telemetry"></a>
   <a href="#domain-navigation-matrix"><img src="https://img.shields.io/badge/domains-12%20specialized-0d1117?style=flat-square&labelColor=161b22" alt="Domains"></a>
+  <a href="https://github.com/Serion89"><img src="https://img.shields.io/badge/maintainer-@Serion89-0d1117?style=flat-square&logo=github&logoColor=58a6ff&labelColor=161b22" alt="Maintainer"></a>
   <a href="#license-and-attribution"><img src="https://img.shields.io/badge/license-MIT%20%2F%20Apache-0d1117?style=flat-square&labelColor=161b22" alt="License"></a>
 </p>
 
-An enterprise-grade, curated suite of 115 production-ready AI Agent Skills compliant with the open Agent Skills Specification. Built for universal compatibility across Claude Code, Cursor, Windsurf, GitHub Copilot CLI, Antigravity, Cline, and Codex.
+A curated collection of 115 verified agent skills conforming to the open [Agent Skills Specification](https://agentskills.io). Compatible with Claude Code, Cursor, Windsurf, Antigravity, GitHub Copilot CLI, and Cline.
 
-[Quickstart](#installation--environment-synchronization) &bull; [Behavioral Comparison](#behavioral-impact-matrix) &bull; [Execution Bus](#execution-pipeline) &bull; [Domain Index](#domain-navigation-matrix) &bull; [Security Protocol](#security--verification-standards)
+[Environment Setup](#interactive-installation-guide) &bull; [Behavioral Comparison](#default-agent-vs-all-in-one-harness) &bull; [Execution Lifecycle](#agent-execution-lifecycle) &bull; [Operational Playbooks](#operational-playbooks) &bull; [Domain Index](#domain-navigation-matrix) &bull; [Maintainer](#project-maintainer)
 
 </div>
 
 ---
 
-## Behavioral Shift: Default Agent vs. All-in-One Harness
+## Interactive Installation Guide
 
-Standard autonomous agents default to predictable failure modes under complex workloads: conversational token exhaustion, premature package sprawl, aesthetic drift, unverified security boundaries, and absent operational runbooks.
+Choose your target coding assistant below to copy the direct setup command:
+
+<details open>
+<summary><b>Claude Code (~/.claude/skills)</b></summary>
+<br>
+
+Installs all 115 skills globally for Claude Code CLI:
+
+```bash
+# Clone and copy into Claude Code global skills path
+git clone https://github.com/Serion89/all-in-one-skills-for-ai.git
+mkdir -p ~/.claude/skills
+cp -r all-in-one-skills-for-ai/skills/* ~/.claude/skills/
+```
+
+Verify in Claude Code:
+```text
+/skills
+# Output: 115 loaded skills (caveman, ponytail, threat-modeling, hexagonal-architecture, etc.)
+```
+
+</details>
+
+<details>
+<summary><b>Cursor (.agents/skills or .cursor/rules)</b></summary>
+<br>
+
+For project-specific use in Cursor:
+
+```bash
+# In your project root
+mkdir -p .agents/skills
+cp -r path/to/all-in-one-skills-for-ai/skills/threat-modeling .agents/skills/
+cp -r path/to/all-in-one-skills-for-ai/skills/caveman .agents/skills/
+cp -r path/to/all-in-one-skills-for-ai/skills/frontend-design .agents/skills/
+cp -r path/to/all-in-one-skills-for-ai/skills/hexagonal-architecture .agents/skills/
+```
+
+Cursor automatically discovers skills located in `.agents/skills` or via custom rules.
+
+</details>
+
+<details>
+<summary><b>Windsurf (.agents/skills)</b></summary>
+<br>
+
+Windsurf reads agent skills natively from the workspace root:
+
+```bash
+# In your workspace root
+mkdir -p .agents/skills
+cp -r path/to/all-in-one-skills-for-ai/skills/* .agents/skills/
+```
+
+</details>
+
+<details>
+<summary><b>Antigravity / Gemini CLI (~/.gemini/config/skills)</b></summary>
+<br>
+
+**On Windows (PowerShell):**
+```powershell
+New-Item -ItemType Directory -Path "$HOME\.gemini\config\skills" -Force
+Copy-Item -Path "all-in-one-skills-for-ai\skills\*" -Destination "$HOME\.gemini\config\skills\" -Recurse -Force
+```
+
+**On Linux or macOS:**
+```bash
+mkdir -p ~/.gemini/config/skills
+cp -r all-in-one-skills-for-ai/skills/* ~/.gemini/config/skills/
+```
+
+</details>
+
+<details>
+<summary><b>Automated Multi-Environment Sync (sync.ps1)</b></summary>
+<br>
+
+The repository includes a cross-platform synchronization script for Windows, macOS, and Linux:
+
+```powershell
+# Synchronize to all detected environments (Claude Code, Gemini/Antigravity)
+.\sync.ps1 -Target all
+
+# Or synchronize to a specific target
+.\sync.ps1 -Target claude
+.\sync.ps1 -Target gemini
+```
+
+</details>
+
+---
+
+## Default Agent vs. All-in-One Harness
+
+Standard coding agents without defined skills default to recurring failure modes: verbose conversational filler that wastes context tokens, premature third-party package installation, absence of threat boundaries, and lack of rollback plans.
 
 <div align="center">
-  <img src="assets/terminal-compare.svg" alt="Behavioral Comparison Terminal" width="100%">
+  <img src="assets/terminal-compare.svg" alt="Terminal Comparison" width="100%">
 </div>
 
-### Behavioral Impact Matrix
+### Measured Behavioral Differences
 
-| Dimension | Default Agent Behavior | With All-in-One Harness | Measured Outcome |
+| Engineering Vector | Default Agent Behavior | With All-in-One Skills | Concrete Result |
 | :--- | :--- | :--- | :--- |
-| **Token Economy** | Conversational filler, repeated logs | `caveman` + `ponytail` + `token-budget-advisor` | **65% to 75% token reduction** |
-| **Code Structure** | Installing packages for trivial tasks | Ladder of Laziness: YAGNI -> Platform Native | **Zero superfluous dependencies** |
-| **UI/UX Craft** | Generic cards, browser default styling | `frontend-design` + `impeccable` + `design-system` | **Bespoke palettes & typography** |
-| **Session Memory** | Context decay across compaction | `planning-with-files` (Manus-style disk memory) | **Continuous state preservation** |
-| **API Quality** | Ad-hoc endpoints, untested edge cases | `contract-testing-pact` + `graphql` + `grpc` | **Deterministic, typed contracts** |
-| **Infrastructure** | Blind file generation | SRE runbooks + `k8s-review` + `terraform-review` | **Production-hardened manifests** |
-| **Cybersecurity** | Implicit trust in client headers | `threat-modeling` (STRIDE) + OWASP API Top 10 | **Defense-in-depth verification** |
+| **Token Consumption** | Conversational filler, full-file re-echoing | `caveman` + `ponytail` + `token-budget-advisor` | **65% to 75% token reduction** |
+| **Dependency Control** | Adds npm/pip packages for basic utility tasks | Ladder of Laziness: YAGNI &rarr; Native platform stdlib | **Zero unnecessary dependencies** |
+| **Interface Craft** | Generic cards, browser defaults, purple accents | `frontend-design` + `impeccable` + `design-system` | **Tokenized design systems & fluid scales** |
+| **Session State** | Context decay across multi-turn sessions | `planning-with-files` (Manus-style disk memory) | **Continuous state preservation on disk** |
+| **API Quality** | Ad-hoc endpoints, untested edge cases | `contract-testing-pact` + `graphql` + `grpc` | **Deterministic consumer contracts** |
+| **Infrastructure** | Blind configuration generation | SRE runbooks + `k8s-review` + `terraform-review` | **Production-hardened manifests** |
+| **Security Auditing** | Implicit trust in client headers | `threat-modeling` (STRIDE) + OWASP API Top 10 | **Mandatory boundary isolation** |
 
 ---
 
-## Execution Pipeline
+## Agent Execution Lifecycle
 
 <div align="center">
   <img src="assets/pipeline.svg" alt="Agent Execution Bus" width="100%">
@@ -53,21 +145,97 @@ Standard autonomous agents default to predictable failure modes under complex wo
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#161b22', 'primaryTextColor': '#c9d1d9', 'primaryBorderColor': '#30363d', 'lineColor': '#58a6ff', 'secondaryColor': '#0d1117', 'tertiaryColor': '#1f242c' }}}%%
 graph TD
-    A[Task Ingestion] --> B[Phase 1: Token & Context Economy]
-    B -->|Caveman + Ponytail + Budget Advisor| C[Phase 2: Ideation, Alignment & Threat Modeling]
-    C -->|Brainstorming + STRIDE + Matt Pocock Interrogation| D[Phase 3: Architecture & System Design]
-    D -->|Hexagonal + DDIA + Ousterhout Deep Modules + Manus Planning| E[Phase 4: Implementation & Visual Craft]
-    E -->|Frontend Design + Impeccable + Liquid Glass + Polyglot Guilds| F[Phase 5: Verification & Quality]
-    F -->|TDD + Pact Contracts + Core Web Vitals + Scientific Debugging| G[Phase 6: Cybersecurity & Resilience]
-    G -->|OWASP API Top 10 + Defensive Stress Testing + Chaos Faults + Gitleaks| H[Phase 7: Infrastructure & SRE]
-    H -->|Docker + K8s + Terraform + Release It + SRE Incident Runbooks| I[Production Deployment]
+    A[Task Ingestion] --> B[Phase 1: Token Economy]
+    B -->|caveman + ponytail + budget-advisor| C[Phase 2: Alignment & Threat Modeling]
+    C -->|brainstorming + threat-modeling + to-spec| D[Phase 3: Architecture & System Design]
+    D -->|hexagonal-architecture + ddia + codebase-design| E[Phase 4: Implementation & Visual Craft]
+    E -->|frontend-design + impeccable + polyglot guilds| F[Phase 5: Verification & Testing]
+    F -->|contract-testing-pact + tdd + scientific debugging| G[Phase 6: Infrastructure & SRE]
+    G -->|k8s-review + terraform-review + incident runbooks| H[Production Deployment]
 ```
+
+---
+
+## Operational Playbooks
+
+Real scenarios showing how skills coordinate during development tasks:
+
+<details open>
+<summary><b>Playbook 1: Massive Codebase Refactoring with Minimal Token Burn</b></summary>
+<br>
+
+When refactoring complex modules, agents often waste thousands of tokens repeating logs and explanations.
+
+1. **Activate Skills**: `caveman` + `surgical-patch` + `investigate-first`
+2. **Behavior**:
+   * Agent strips conversational filler words and responds in dense technical telegraphic phrasing.
+   * Agent is restricted from rewriting entire 500-line files; changes are scoped strictly to 5-15 line diff ranges.
+   * Root-cause investigation is mandated before modifying any source code.
+3. **Prompt Example**:
+   ```text
+   Use caveman and surgical-patch: Refactor the Redis client pool in src/cache/pool.ts to use exponential backoff with jitter.
+   ```
+
+</details>
+
+<details>
+<summary><b>Playbook 2: Defensive API Endpoint with Consumer Contract Testing</b></summary>
+<br>
+
+Building endpoints that handle multi-tenant isolation and verify schema contracts in CI without full staging clusters.
+
+1. **Activate Skills**: `threat-modeling` + `api-security-testing` + `contract-testing-pact`
+2. **Behavior**:
+   * Analyzes the endpoint against STRIDE threat vectors (BOLA, Broken Object Property Level Auth, SSRF).
+   * Validates tenant isolation in SQL/ORM queries to prevent cross-account data leakage.
+   * Generates a Pact consumer-driven contract file for consumer and provider verification.
+3. **Prompt Example**:
+   ```text
+   Build the tenant billing webhook endpoint. Use threat-modeling to audit access boundaries and contract-testing-pact for verification.
+   ```
+
+</details>
+
+<details>
+<summary><b>Playbook 3: Live SRE Incident Triage and Root Cause Isolation</b></summary>
+<br>
+
+Handling active production alerts or Kubernetes crash loops under tight incident timelines.
+
+1. **Activate Skills**: `sev1-first-15-minutes` + `diagnose-crashloop` + `incident`
+2. **Behavior**:
+   * Enforces the 15-minute incident commander protocol: blast radius assessment, containment, and stakeholder status updates.
+   * Executes the diagnostic decision tree for container exits (ExitCode 137 OOMKilled vs. ExitCode 1 / CrashLoopBackOff).
+   * Formulates structured hypotheses before recommending rollback or configuration changes.
+3. **Prompt Example**:
+   ```text
+   Service payment-worker is CrashLooping in production staging. Use diagnose-crashloop and sev1-first-15-minutes to isolate root cause.
+   ```
+
+</details>
+
+<details>
+<summary><b>Playbook 4: Eliminating Dependency Sprawl (Ladder of Laziness)</b></summary>
+<br>
+
+Preventing agents from importing heavy third-party libraries for simple algorithmic problems.
+
+1. **Activate Skills**: `ponytail` + `lean-build` + `clean-code`
+2. **Behavior**:
+   * Evaluates the Ladder of Laziness: YAGNI &rarr; Codebase Reuse &rarr; Standard Library &rarr; Platform Native &rarr; Minimal Diff.
+   * Rejects installing npm packages for tasks easily solved with native platform APIs (e.g. `node:crypto`, `Intl`, Web Streams).
+3. **Prompt Example**:
+   ```text
+   Use ponytail: Add HMAC token signing to our webhook handler. Strictly zero new dependencies.
+   ```
+
+</details>
 
 ---
 
 ## Domain Navigation Matrix
 
-| Index | Domain Focus | Modules | Direct Jump |
+| Index | Domain Focus | Modules | Jump Link |
 | :-: | :--- | :-: | :--- |
 | **01** | Token Efficiency & Context Economy | 09 | [Section 01 &rarr;](#01-token-efficiency-and-context-economy-9-skills) |
 | **02** | Minimalist Architecture & Anti-Over-Engineering | 06 | [Section 02 &rarr;](#02-minimalist-architecture-and-anti-over-engineering-6-skills) |
@@ -114,7 +282,7 @@ Focus: Enforce YAGNI principles, prevent dependency sprawl, and produce surgical
 
 | Skill Identifier | Purpose & Capabilities | Upstream Author & Origin |
 | :--- | :--- | :--- |
-| `ponytail` | Enforces the "Ladder of Laziness" to stop over-engineering: YAGNI -> Codebase Reuse -> Standard Library -> Platform Native -> Minimal Diff. | [Dietrich Gebert](https://github.com/DietrichGebert/ponytail) |
+| `ponytail` | Enforces the "Ladder of Laziness" to stop over-engineering: YAGNI &rarr; Codebase Reuse &rarr; Standard Library &rarr; Platform Native &rarr; Minimal Diff. | [Dietrich Gebert](https://github.com/DietrichGebert/ponytail) |
 | `ponytail-audit` | Audits codebases for dependency sprawl, oversized npm packages, and superfluous abstractions. | [Dietrich Gebert](https://github.com/DietrichGebert/ponytail) |
 | `ponytail-debt` | Evaluates architectural debt and premature abstractions prior to feature development. | [Dietrich Gebert](https://github.com/DietrichGebert/ponytail) |
 | `lean-build` | Minimalist build and bundle strategies prioritizing platform primitives and zero-dependency patterns. | [Dietrich Gebert](https://github.com/DietrichGebert/ponytail) |
@@ -230,7 +398,7 @@ Focus: Red-Green-Refactor test loops, consumer contracts, rigorous peer review, 
 | `code-reviewer` | Evaluates pull requests for race conditions, resource leaks, edge-case coverage, and API ergonomics. | Staff Reviewer Guild |
 | `requesting-code-review` | Compiles focused, context-aware review packets detailing intent, changes, and verification proof. | [Jesse Vincent (obra)](https://github.com/obra/superpowers) |
 | `receiving-code-review` | Systematically parses review comments and refactors code without defensive rationalization. | [Jesse Vincent (obra)](https://github.com/obra/superpowers) |
-| `systematic-debugging` | 4-phase diagnostic loop: Reproduce -> Isolate Root Cause -> Formulate Hypothesis -> Prove Resolution. | Systems Reliability Guild |
+| `systematic-debugging` | 4-phase diagnostic loop: Reproduce &rarr; Isolate Root Cause &rarr; Formulate Hypothesis &rarr; Prove Resolution. | Systems Reliability Guild |
 | `debugging-toolkit` | Diagnostic tooling integration for interactive memory examination and core dump analysis. | Systems Diagnostic Guild |
 | `triage` | Systematically reproduces bug reports, isolates environments, and establishes minimal failure cases. | [Matt Pocock](https://github.com/mattpocock/skills) |
 | `doubt-driven-development` | Actively stress-tests agent hypotheses with critical skepticism before committing changes. | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
@@ -335,61 +503,6 @@ Focus: Infrastructure verification, production stability patterns, container har
 
 ---
 
-## Installation & Environment Synchronization
-
-Supported environments: **Claude Code**, **Cursor**, **Windsurf**, **Antigravity / Gemini CLI**, **GitHub Copilot CLI**, and **Cline**.
-
-### Quick Deployment
-
-```bash
-# Clone the unified harness repository
-git clone https://github.com/Serion89/all-in-one-skills-for-ai.git
-```
-
-#### Method 1: Global Deployment (Claude Code)
-
-```bash
-cp -r all-in-one-skills-for-ai/skills/* ~/.claude/skills/
-```
-
-#### Method 2: Global Deployment (Antigravity / Gemini CLI)
-
-On Windows (PowerShell):
-```powershell
-Copy-Item -Path "all-in-one-skills-for-ai\skills\*" -Destination "$HOME\.gemini\config\skills\" -Recurse -Force
-```
-
-On Linux or macOS:
-```bash
-mkdir -p ~/.gemini/config/skills
-cp -r all-in-one-skills-for-ai/skills/* ~/.gemini/config/skills/
-```
-
-#### Method 3: Automated Workspace Sync
-
-A built-in PowerShell script synchronizes the skill library across installed agent environments:
-
-```powershell
-# Windows PowerShell
-.\sync.ps1 -Target all     # Options: claude, gemini, all
-```
-
-#### Method 4: Project-Specific Deployment (Cursor, Windsurf, Cline)
-
-Copy desired skills directly into your project's agent skills directory:
-
-```bash
-mkdir -p .agents/skills
-cp -r path/to/all-in-one-skills-for-ai/skills/threat-modeling .agents/skills/
-cp -r path/to/all-in-one-skills-for-ai/skills/defensive-stress-testing .agents/skills/
-cp -r path/to/all-in-one-skills-for-ai/skills/api-security-testing .agents/skills/
-cp -r path/to/all-in-one-skills-for-ai/skills/frontend-design .agents/skills/
-cp -r path/to/all-in-one-skills-for-ai/skills/caveman .agents/skills/
-cp -r path/to/all-in-one-skills-for-ai/skills/event-driven-architecture .agents/skills/
-```
-
----
-
 ## Security & Verification Standards
 
 | Security Requirement | Implementation | Guarantee |
@@ -401,8 +514,22 @@ cp -r path/to/all-in-one-skills-for-ai/skills/event-driven-architecture .agents/
 
 ---
 
+## Project Maintainer
+
+<div align="center">
+  <a href="https://github.com/Serion89">
+    <img src="assets/author-card.svg" alt="Sahil Bhatt (@Serion89) GitHub Profile" width="100%">
+  </a>
+  <br><br>
+  <a href="https://github.com/Serion89"><img src="https://img.shields.io/badge/Follow-@Serion89-181717?style=flat-square&logo=github&logoColor=white" alt="Follow @Serion89"></a>
+  <a href="https://github.com/Serion89/all-in-one-skills-for-ai"><img src="https://img.shields.io/github/stars/Serion89/all-in-one-skills-for-ai?style=flat-square&logo=github&color=58a6ff" alt="Star Repository"></a>
+  <a href="https://github.com/Serion89/all-in-one-skills-for-ai/fork"><img src="https://img.shields.io/github/forks/Serion89/all-in-one-skills-for-ai?style=flat-square&logo=github&color=58a6ff" alt="Fork Repository"></a>
+</div>
+
+---
+
 ## License and Attribution
 
-This meta-repository is curated and maintained by [Serion89](https://github.com/Serion89).
+This meta-repository is curated and maintained by [Sahil Bhatt (@Serion89)](https://github.com/Serion89).
 
 All upstream skills are credited to their respective original authors and maintainers under their open-source licenses (MIT / Apache 2.0). Individual copyright notices and licenses reside within their respective upstream repositories linked in the index above.

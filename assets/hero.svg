@@ -1,85 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 260" width="100%" height="260" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 230" width="100%" height="230" fill="none">
   <defs>
-    <!-- Background Gradient -->
     <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#070a11" />
       <stop offset="50%" stop-color="#0d1117" />
       <stop offset="100%" stop-color="#0a0e17" />
     </linearGradient>
 
-    <!-- Top Border Beam Gradient -->
-    <linearGradient id="beam-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="border-beam" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
-      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.8" />
-      <stop offset="50%" stop-color="#818cf8" stop-opacity="1" />
-      <stop offset="75%" stop-color="#34d399" stop-opacity="0.8" />
+      <stop offset="30%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.9" />
+      <stop offset="70%" stop-color="#34d399" stop-opacity="0.8" />
       <stop offset="100%" stop-color="#34d399" stop-opacity="0" />
     </linearGradient>
 
-    <!-- Subtle Grid Pattern -->
     <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#30363d" stroke-width="0.6" stroke-opacity="0.25" />
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#30363d" stroke-width="0.5" stroke-opacity="0.25" />
     </pattern>
-
-    <!-- Radial Glow Behind Title -->
-    <radialGradient id="title-glow" cx="50%" cy="40%" r="50%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.12" />
-      <stop offset="100%" stop-color="#070a11" stop-opacity="0" />
-    </radialGradient>
   </defs>
 
   <style>
     @keyframes pulse-ring {
-      0% { r: 4px; opacity: 0.9; stroke-width: 1px; }
-      50% { r: 9px; opacity: 0.3; stroke-width: 1.5px; }
-      100% { r: 14px; opacity: 0; stroke-width: 0.5px; }
+      0% { r: 3.5px; opacity: 0.9; stroke-width: 1px; }
+      50% { r: 8px; opacity: 0.25; stroke-width: 1.5px; }
+      100% { r: 12px; opacity: 0; stroke-width: 0.5px; }
     }
     @keyframes beam-slide {
       0% { transform: translateX(-100%); }
       100% { transform: translateX(100%); }
     }
-    @keyframes scanline {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(260px); }
-    }
     .pulsing-ring {
-      animation: pulse-ring 2.4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-      transform-origin: 42px 38px;
+      animation: pulse-ring 2.8s cubic-bezier(0.2, 0.6, 0.35, 1) infinite;
+      transform-origin: 40px 36px;
     }
     .beam-animation {
       animation: beam-slide 6s ease-in-out infinite alternate;
     }
     .text-title {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      font-size: 32px;
+      font-size: 30px;
       font-weight: 800;
       letter-spacing: -0.8px;
       fill: #f0f6fc;
     }
     .text-tag {
-      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-      font-size: 11px;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 10.5px;
       font-weight: 600;
-      letter-spacing: 1.2px;
-      fill: #7ee787;
+      letter-spacing: 0.8px;
+      fill: #3fb950;
     }
     .text-sub {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       font-size: 13.5px;
       font-weight: 400;
-      letter-spacing: 0.2px;
+      letter-spacing: 0.1px;
       fill: #8b949e;
     }
     .metric-value {
-      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-      font-size: 14px;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 13.5px;
       font-weight: 700;
       letter-spacing: -0.2px;
       fill: #e6edf3;
     }
     .metric-label {
-      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-      font-size: 9.5px;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 9px;
       font-weight: 600;
       letter-spacing: 0.8px;
       fill: #6e7681;
@@ -87,74 +74,52 @@
   </style>
 
   <!-- Container Box -->
-  <rect width="880" height="260" rx="10" fill="url(#bg-grad)" stroke="#30363d" stroke-width="1.2" />
+  <rect width="880" height="230" rx="10" fill="url(#bg-grad)" stroke="#30363d" stroke-width="1.2" />
 
   <!-- Background Grid -->
-  <rect width="880" height="260" rx="10" fill="url(#grid)" />
+  <rect width="880" height="230" rx="10" fill="url(#grid)" />
 
-  <!-- Center Ambient Glow -->
-  <rect x="140" y="20" width="600" height="180" fill="url(#title-glow)" pointer-events="none" />
-
-  <!-- Top Animated Border Beam -->
+  <!-- Top Border Accent -->
   <g clip-path="url(#top-clip)">
     <clipPath id="top-clip">
       <rect width="880" height="3" rx="2" />
     </clipPath>
-    <rect x="-440" y="0" width="880" height="2.5" fill="url(#beam-grad)" class="beam-animation" />
+    <rect x="-440" y="0" width="880" height="2" fill="url(#border-beam)" class="beam-animation" />
   </g>
 
   <!-- Status Beacon & System Tag -->
   <g transform="translate(0, 0)">
-    <circle cx="42" cy="38" r="4" fill="#3fb950" />
-    <circle cx="42" cy="38" r="4" fill="none" stroke="#3fb950" class="pulsing-ring" />
-    <text x="60" y="42" class="text-tag">SYSTEM HARNESS // PROTOCOL v2.4 // ONLINE</text>
+    <circle cx="40" cy="36" r="3.5" fill="#3fb950" />
+    <circle cx="40" cy="36" r="3.5" fill="none" stroke="#3fb950" class="pulsing-ring" />
+    <text x="56" y="40" class="text-tag">ALL-IN-ONE AGENT SKILLS // OPEN SPECIFICATION COMPLIANT</text>
   </g>
 
   <!-- Main Repository Title -->
-  <text x="42" y="92" class="text-title">ALL-IN-ONE SKILLS FOR AI</text>
+  <text x="40" y="86" class="text-title">ALL-IN-ONE SKILLS FOR AI</text>
 
   <!-- Subtitle Line -->
-  <text x="42" y="122" class="text-sub">Deterministic intelligence harness with 115 production-audited modules across 12 engineering domains.</text>
-
-  <!-- Spec Badges inline -->
-  <g transform="translate(42, 142)">
-    <!-- Pill 1: Open Spec -->
-    <rect x="0" y="0" width="144" height="22" rx="4" fill="#161b22" stroke="#30363d" stroke-width="1" />
-    <text x="10" y="15" font-family="ui-monospace, monospace" font-size="10" font-weight="600" fill="#58a6ff">SPEC: agentskills.io</text>
-
-    <!-- Pill 2: Zero Telemetry -->
-    <rect x="154" y="0" width="138" height="22" rx="4" fill="#161b22" stroke="#30363d" stroke-width="1" />
-    <text x="164" y="15" font-family="ui-monospace, monospace" font-size="10" font-weight="600" fill="#3fb950">TELEMETRY: ZERO</text>
-
-    <!-- Pill 3: Executable Code -->
-    <rect x="302" y="0" width="140" height="22" rx="4" fill="#161b22" stroke="#30363d" stroke-width="1" />
-    <text x="312" y="15" font-family="ui-monospace, monospace" font-size="10" font-weight="600" fill="#d29922">BINARY ASSETS: 0</text>
-
-    <!-- Pill 4: License -->
-    <rect x="452" y="0" width="146" height="22" rx="4" fill="#161b22" stroke="#30363d" stroke-width="1" />
-    <text x="462" y="15" font-family="ui-monospace, monospace" font-size="10" font-weight="600" fill="#bc8cff">LICENSE: MIT / APACHE</text>
-  </g>
+  <text x="40" y="114" class="text-sub">115 production-audited agent skills across 12 engineering disciplines &#8226; Claude Code, Cursor, Windsurf, Antigravity</text>
 
   <!-- Lower Telemetry Matrix / HUD -->
-  <g transform="translate(42, 184)">
+  <g transform="translate(40, 146)">
     <!-- Metric Box 1 -->
     <rect x="0" y="0" width="190" height="54" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1" />
-    <text x="14" y="22" class="metric-label">ACTIVE MODULES</text>
-    <text x="14" y="42" class="metric-value">115 SKILL.MD</text>
+    <text x="14" y="22" class="metric-label">VERIFIED MODULES</text>
+    <text x="14" y="41" class="metric-value">115 SKILL.MD</text>
 
     <!-- Metric Box 2 -->
     <rect x="202" y="0" width="190" height="54" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1" />
-    <text x="216" y="22" class="metric-label">DOMAIN GUILDS</text>
-    <text x="216" y="42" class="metric-value">12 SECTORS</text>
+    <text x="14" y="22" transform="translate(202, 0)" class="metric-label">DOMAIN GUILDS</text>
+    <text x="14" y="41" transform="translate(202, 0)" class="metric-value">12 DISCIPLINES</text>
 
     <!-- Metric Box 3 -->
     <rect x="404" y="0" width="190" height="54" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1" />
-    <text x="418" y="22" class="metric-label">TOKEN REDUCTION</text>
-    <text x="418" y="42" class="metric-value">65% TO 75%</text>
+    <text x="14" y="22" transform="translate(404, 0)" class="metric-label">TOKEN EFFICIENCY</text>
+    <text x="14" y="41" transform="translate(404, 0)" class="metric-value">65% TO 75% SAVED</text>
 
     <!-- Metric Box 4 -->
     <rect x="606" y="0" width="190" height="54" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1" />
-    <text x="620" y="22" class="metric-label">AUDIT GUARANTEE</text>
-    <text x="620" y="42" class="metric-value">100% AUDITABLE</text>
+    <text x="14" y="22" transform="translate(606, 0)" class="metric-label">AUDIT GUARANTEE</text>
+    <text x="14" y="41" transform="translate(606, 0)" class="metric-value">0 EXECUTABLES // SPEC</text>
   </g>
 </svg>
