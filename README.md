@@ -1,36 +1,36 @@
 # All-in-One Skills for AI (`all-in-one-skills-for-ai`)
 
-An enterprise-grade, curated suite of 91 production-ready AI Agent Skills compliant with the open [Agent Skills Specification](https://agentskills.io). Built for cross-harness compatibility across Claude Code, Cursor, Windsurf, GitHub Copilot CLI, Antigravity, Cline, and Codex.
+An enterprise-grade, curated suite of 100 production-ready AI Agent Skills compliant with the open [Agent Skills Specification](https://agentskills.io). Built for cross-harness compatibility across Claude Code, Cursor, Windsurf, GitHub Copilot CLI, Antigravity, Cline, and Codex.
 
 ---
 
 ## Architecture Overview
 
 Modern AI coding agents face five core limitations:
-1. **Context Exhaustion**: Unbounded reasoning and conversational pleasantries waste token budgets and cause context truncation.
-2. **Premature Abstraction**: Defaulting to third-party dependencies and over-engineered wrappers over platform primitives.
-3. **Aesthetic Drift**: Unstyled, generic components lacking typographic hierarchy, spatial rhythm, and responsive fluidity.
-4. **Context Decay**: Loss of project state across long-running sessions, causing plan drift and regressions.
-5. **Operational Blindspots**: Shipping code without verifying database lock contention, container efficiency, security boundaries, or Kubernetes manifest health.
+1. **Context Exhaustion**: Unbounded reasoning loops and conversational filler waste token budgets and cause premature context truncation.
+2. **Premature Abstraction**: Defaulting to third-party dependencies and over-engineered wrappers over native platform primitives.
+3. **Aesthetic Drift**: Unstyled, generic user interfaces lacking typographic hierarchy, spatial rhythm, and responsive fluidity.
+4. **Context Decay**: Loss of project state and architectural invariants across long-running sessions, causing plan drift and regressions.
+5. **Operational Blindspots**: Shipping code without verifying database lock contention, low-latency allocations, container efficiency, security boundaries, or Kubernetes manifest health.
 
 This collection provides a structured, multi-phase execution pipeline addressing each stage of the software lifecycle.
 
 ```mermaid
 graph TD
     A[Task Specification] --> B[Phase 1: Token & Context Optimization]
-    B -->|Caveman + Ponytail| C[Phase 2: Architectural Alignment & Planning]
-    C -->|Superpowers + Matt Pocock + DDIA + Manus Planning| D[Phase 3: Implementation & Craft]
-    D -->|Frontend Design + Impeccable + Systems Guild| E[Phase 4: Verification & Testing]
-    E -->|TDD + Addy Osmani Verification + Legacy Code Seams| F[Phase 5: Infrastructure & SRE Audit]
-    F -->|Docker + K8s + Terraform + Release It + SRE Runbooks| G[Production Deployment]
+    B -->|Caveman + Ponytail + Token Budget Advisor| C[Phase 2: Architectural Alignment & Planning]
+    C -->|Superpowers + Matt Pocock + Hexagonal + DDIA + Manus Planning| D[Phase 3: Implementation & Craft]
+    D -->|Frontend Design + Impeccable + Liquid Glass + Polyglot Guilds| E[Phase 4: Verification & Testing]
+    E -->|TDD + Addy Osmani Verification + Legacy Code Seams + Scientific Debugging| F[Phase 5: Infrastructure & SRE Audit]
+    F -->|Docker + K8s + Terraform + Release It + SRE Incident Runbooks| G[Production Deployment]
 ```
 
 ---
 
-## Skill Directory & Attribution Index (91 Skills)
+## Skill Directory & Attribution Index (100 Skills)
 
 <details open>
-<summary><b>1. Token Efficiency, Conciseness and Anti-Over-Engineering (14 Skills)</b></summary>
+<summary><b>1. Token Efficiency, Conciseness and Anti-Over-Engineering (15 Skills)</b></summary>
 <br>
 
 Focus: Strip conversational padding, minimize token burn, and enforce the "Lazy Senior Developer" YAGNI philosophy.
@@ -51,11 +51,12 @@ Focus: Strip conversational padding, minimize token burn, and enforce the "Lazy 
 | `verify-and-stop` | Defines deterministic criteria to cease agent execution once requirements are satisfied. | [Dietrich Gebert](https://github.com/DietrichGebert/ponytail) |
 | `code-simplification` | Reduces code complexity, removes dead branches, and streamlines logic paths for readability. | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
 | `context-engineering` | Optimizes in-memory prompt structures and token distribution for complex agent tasks. | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
+| `token-budget-advisor` | Quantifies prompt cost impact, analyzes token allocation per file, and optimizes payload efficiency. | [Affaan Mustafa (ECC)](https://github.com/affaan-m/ECC) |
 
 </details>
 
 <details open>
-<summary><b>2. UI/UX, Frontend Design Systems and Visual Craft (10 Skills)</b></summary>
+<summary><b>2. UI/UX, Frontend Design Systems and Visual Craft (11 Skills)</b></summary>
 <br>
 
 Focus: Replace default AI aesthetics with intentional design systems, cohesive typography, and responsive fluidity.
@@ -64,6 +65,7 @@ Focus: Replace default AI aesthetics with intentional design systems, cohesive t
 | :--- | :--- | :--- |
 | `frontend-design` | Overrides generic AI UI conventions; establishes distinct color palettes, font pairings, spatial tension, and layout systems. | [Anthropic](https://github.com/anthropics/skills) |
 | `impeccable` | Award-winning design director toolkit covering 20+ specialized playbooks: audits, micro-interactions, typography, and polish. | [Paul Bakaus](https://github.com/pbakaus/impeccable) |
+| `liquid-glass-design` | Advanced glassmorphism paradigms: backdrop blur layers, border reflections, fluid depth, and dark-mode lighting. | [Affaan Mustafa (ECC)](https://github.com/affaan-m/ECC) |
 | `ui-ux-pro-max` | Comprehensive design intelligence database covering 57 UI paradigms, 95 industry palettes, and micro-interaction heuristics. | [NextLevelBuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
 | `design-system` | Generates tokenized CSS variables, typography ladders, fluid spacing scales, and reusable component contracts. | [NextLevelBuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
 | `ui-styling` | Production utility CSS and Tailwind configurations with responsiveness and dark-mode tokens. | [NextLevelBuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
@@ -76,7 +78,7 @@ Focus: Replace default AI aesthetics with intentional design systems, cohesive t
 </details>
 
 <details open>
-<summary><b>3. High-Level Thinking, Architecture and Complex Planning (28 Skills)</b></summary>
+<summary><b>3. High-Level Thinking, Architecture and Complex Planning (30 Skills)</b></summary>
 <br>
 
 Focus: Transform ad-hoc prompting into disciplined engineering methodology, persistent disk memory, and multi-agent execution.
@@ -93,6 +95,8 @@ Focus: Transform ad-hoc prompting into disciplined engineering methodology, pers
 | `requesting-code-review` | Compiles focused, context-aware review packets detailing intent, changes, and verification proof. | [Jesse Vincent (obra)](https://github.com/obra/superpowers) |
 | `receiving-code-review` | Systematically parses review comments and refactors code without defensive rationalization. | [Jesse Vincent (obra)](https://github.com/obra/superpowers) |
 | `planning-with-files` | Implements persistent markdown memory (`task_plan.md`, `findings.md`) on disk to prevent memory decay. | [Othman Adi](https://github.com/OthmanAdi/planning-with-files) |
+| `hexagonal-architecture` | Ports and Adapters architecture: decouples business domain core from driving and driven infrastructure adapters. | [Affaan Mustafa / Cockburn](https://github.com/affaan-m/ECC) |
+| `latency-critical-systems` | Zero-allocation techniques, cache-line alignment, lock-free ring buffers, and batching heuristics for sub-millisecond systems. | [Affaan Mustafa (ECC)](https://github.com/affaan-m/ECC) |
 | `philosophy-of-software-design` | John Ousterhout's principles: deep modules with simple interfaces, information hiding, and defining errors out of existence. | [Ciembor / Ousterhout](https://github.com/ciembor/agent-rules-books) |
 | `pragmatic-programmer` | Craftsmanship principles: tracer bullets, orthogonality, broken windows, DRY, and deliberate engineering habits. | [Ciembor / Hunt & Thomas](https://github.com/ciembor/agent-rules-books) |
 | `wayfinder` | Navigates unfamiliar codebases with architectural reconnaissance and dependency graphing. | [Matt Pocock](https://github.com/mattpocock/skills) |
@@ -135,21 +139,23 @@ Focus: Scientific root-cause analysis, strict test-driven development, legacy co
 </details>
 
 <details open>
-<summary><b>5. Systems Programming and Language Mastery (3 Skills)</b></summary>
+<summary><b>5. Systems Programming and Language Mastery (5 Skills)</b></summary>
 <br>
 
-Focus: Idiomatic language features, memory safety, RAII, and zero-cost abstractions.
+Focus: Idiomatic language features, memory safety, RAII, concurrency models, and zero-cost abstractions.
 
 | Skill Identifier | Purpose & Capabilities | Upstream Author & Origin |
 | :--- | :--- | :--- |
 | `rust-pro` | Idiomatic Rust 1.75+: borrow checker navigation, RAII, lifetime elision, Tokio async runtimes, and unsafe encapsulation. | Systems Programming Guild |
 | `cpp-pro` | Modern C++20/C++23: RAII, move semantics, smart pointers, concept constraints, and STL algorithm dispatch. | Modern C++ Architecture Guild |
 | `c-pro` | Strict C11 memory safety, pointer arithmetic bounds, manual allocation tracking, and POSIX compliance. | Low-Level Systems Guild |
+| `golang-patterns` | Idiomatic Go concurrency: goroutine lifecycle management, channel topologies, context cancellation, and error groups. | [Affaan Mustafa / Go Guild](https://github.com/affaan-m/ECC) |
+| `fastapi-patterns` | High-throughput Python: Pydantic v2 validation, asynchronous dependency injection, and OpenAPI 3.1 generation. | [Affaan Mustafa / Python Guild](https://github.com/affaan-m/ECC) |
 
 </details>
 
 <details open>
-<summary><b>6. Backend Architecture, Databases and DevSecOps (10 Skills)</b></summary>
+<summary><b>6. Backend Architecture, Databases and DevSecOps (13 Skills)</b></summary>
 <br>
 
 Focus: Resilient database layers, distributed data intensive patterns, schema migration safety, security posture, and runtime profiling.
@@ -159,6 +165,9 @@ Focus: Resilient database layers, distributed data intensive patterns, schema mi
 | `data-intensive-applications` | Martin Kleppmann's DDIA principles: explicit consistency semantics, partition keys, replication lag, and stream processing. | [Ciembor / Kleppmann](https://github.com/ciembor/agent-rules-books) |
 | `system-design` | Calculates capacity constraints (QPS, IOPS, bandwidth), evaluates CAP/ACID trade-offs, and documents architectures. | [Pinchen](https://github.com/pinchen147/system-design-skill) |
 | `architect-review` | Audits system boundaries, domain models, interface coupling, and high-load failure modes. | Software Architecture Guild |
+| `mcp-server-patterns` | Model Context Protocol engineering: JSON-RPC request-response cycles, tool registrations, SSE transports, and schema validation. | [Affaan Mustafa (ECC)](https://github.com/affaan-m/ECC) |
+| `postgres-patterns` | Advanced PostgreSQL: B-tree/GIN/BRIN indexing, EXPLAIN ANALYZE interpretation, jsonb operations, and connection pooling. | [Affaan Mustafa (ECC)](https://github.com/affaan-m/ECC) |
+| `redis-patterns` | Redis data structures, distributed locking with Lua scripts, pipeline batching, Pub/Sub channels, and cache eviction strategies. | [Affaan Mustafa (ECC)](https://github.com/affaan-m/ECC) |
 | `api-and-interface-design` | Designs resilient REST, RPC, and GraphQL interfaces with idempotency, versioning, and rate limiting. | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
 | `database` | Relational and document data modeling, query analysis, index selection, and transaction isolation. | Systems Database Guild |
 | `db-review` | Inspects migration scripts for locking behavior, table rewrites, connection exhaustion, and rollback safety. | [Harshhaa](https://github.com/NotHarshhaa/devops-skills) |
@@ -203,7 +212,7 @@ Focus: Infrastructure verification, production stability patterns, container har
 
 ### Method 1: Global Deployment (Claude Code)
 
-To link all 91 skills into your user-level Claude Code environment:
+To link all 100 skills into your user-level Claude Code environment:
 
 ```bash
 git clone https://github.com/Serion89/all-in-one-skills-for-ai.git
@@ -242,6 +251,7 @@ cp -r path/to/all-in-one-skills-for-ai/skills/frontend-design .agents/skills/
 cp -r path/to/all-in-one-skills-for-ai/skills/planning-with-files .agents/skills/
 cp -r path/to/all-in-one-skills-for-ai/skills/caveman .agents/skills/
 cp -r path/to/all-in-one-skills-for-ai/skills/wayfinder .agents/skills/
+cp -r path/to/all-in-one-skills-for-ai/skills/hexagonal-architecture .agents/skills/
 cp -r path/to/all-in-one-skills-for-ai/skills/data-intensive-applications .agents/skills/
 ```
 
