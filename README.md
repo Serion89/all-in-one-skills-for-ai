@@ -1,33 +1,35 @@
 # All-in-One Skills for AI (`all-in-one-skills-for-ai`)
 
-An enterprise-grade, curated suite of 100 production-ready AI Agent Skills compliant with the open [Agent Skills Specification](https://agentskills.io). Built for cross-harness compatibility across Claude Code, Cursor, Windsurf, GitHub Copilot CLI, Antigravity, Cline, and Codex.
+An enterprise-grade, curated suite of 105 production-ready AI Agent Skills compliant with the open [Agent Skills Specification](https://agentskills.io). Built for cross-harness compatibility across Claude Code, Cursor, Windsurf, GitHub Copilot CLI, Antigravity, Cline, and Codex.
 
 ---
 
 ## Architecture Overview
 
-Modern AI coding agents face five core limitations:
+Modern AI coding agents face six core operational limitations:
 1. **Context Exhaustion**: Unbounded reasoning loops and conversational filler waste token budgets and cause premature context truncation.
-2. **Premature Abstraction**: Defaulting to third-party dependencies and over-engineered wrappers over native platform primitives.
+2. **Premature Abstraction**: Defaulting to third-party dependencies and over-engineered wrappers over platform primitives.
 3. **Aesthetic Drift**: Unstyled, generic user interfaces lacking typographic hierarchy, spatial rhythm, and responsive fluidity.
 4. **Context Decay**: Loss of project state and architectural invariants across long-running sessions, causing plan drift and regressions.
-5. **Operational Blindspots**: Shipping code without verifying database lock contention, low-latency allocations, container efficiency, security boundaries, or Kubernetes manifest health.
+5. **Operational Blindspots**: Shipping code without verifying database lock contention, low-latency allocations, container efficiency, or Kubernetes manifest health.
+6. **Security & Resilience Gaps**: Deploying endpoints without verifying authorization boundaries, rate limiting, secret leakage, or behavior under high-concurrency stress.
 
 This collection provides a structured, multi-phase execution pipeline addressing each stage of the software lifecycle.
 
 ```mermaid
 graph TD
     A[Task Specification] --> B[Phase 1: Token & Context Optimization]
-    B -->|Caveman + Ponytail + Token Budget Advisor| C[Phase 2: Architectural Alignment & Planning]
-    C -->|Superpowers + Matt Pocock + Hexagonal + DDIA + Manus Planning| D[Phase 3: Implementation & Craft]
-    D -->|Frontend Design + Impeccable + Liquid Glass + Polyglot Guilds| E[Phase 4: Verification & Testing]
-    E -->|TDD + Addy Osmani Verification + Legacy Code Seams + Scientific Debugging| F[Phase 5: Infrastructure & SRE Audit]
-    F -->|Docker + K8s + Terraform + Release It + SRE Incident Runbooks| G[Production Deployment]
+    B -->|Caveman + Ponytail + Token Budget Advisor| C[Phase 2: Architectural Alignment & Threat Modeling]
+    C -->|Superpowers + Matt Pocock + STRIDE + Manus Planning| D[Phase 3: Implementation & Craft]
+    D -->|Frontend Design + Impeccable + Liquid Glass + Polyglot Guilds| E[Phase 4: Verification & Quality]
+    E -->|TDD + Addy Osmani Verification + Legacy Code Seams + Scientific Debugging| F[Phase 5: Cybersecurity & Stress Testing]
+    F -->|API Security Top 10 + Defensive Stress Testing + Chaos Faults + Gitleaks| G[Phase 6: Infrastructure & SRE Audit]
+    G -->|Docker + K8s + Terraform + Release It + SRE Incident Runbooks| H[Production Deployment]
 ```
 
 ---
 
-## Skill Directory & Attribution Index (100 Skills)
+## Skill Directory & Attribution Index (105 Skills)
 
 <details open>
 <summary><b>1. Token Efficiency, Conciseness and Anti-Over-Engineering (15 Skills)</b></summary>
@@ -155,10 +157,10 @@ Focus: Idiomatic language features, memory safety, RAII, concurrency models, and
 </details>
 
 <details open>
-<summary><b>6. Backend Architecture, Databases and DevSecOps (13 Skills)</b></summary>
+<summary><b>6. Backend Architecture and Distributed Databases (11 Skills)</b></summary>
 <br>
 
-Focus: Resilient database layers, distributed data intensive patterns, schema migration safety, security posture, and runtime profiling.
+Focus: Resilient database layers, distributed data intensive patterns, schema migration safety, and runtime profiling.
 
 | Skill Identifier | Purpose & Capabilities | Upstream Author & Origin |
 | :--- | :--- | :--- |
@@ -171,15 +173,31 @@ Focus: Resilient database layers, distributed data intensive patterns, schema mi
 | `api-and-interface-design` | Designs resilient REST, RPC, and GraphQL interfaces with idempotency, versioning, and rate limiting. | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
 | `database` | Relational and document data modeling, query analysis, index selection, and transaction isolation. | Systems Database Guild |
 | `db-review` | Inspects migration scripts for locking behavior, table rewrites, connection exhaustion, and rollback safety. | [Harshhaa](https://github.com/NotHarshhaa/devops-skills) |
-| `security-auditor` | Evaluates source code for OWASP Top 10 vulnerabilities, credential leakage, and insecure deserialization. | DevSecOps Guild |
-| `security-review` | Audits endpoint authentication, token validation, authorization boundaries, and cryptographic configurations. | [Harshhaa](https://github.com/NotHarshhaa/devops-skills) |
 | `performance-profiling` | Profiles CPU, memory allocation, garbage collection pressure, and I/O bottlenecks. | Systems Engineering Guild |
 | `powershell-windows` | Cross-platform and Windows PowerShell conventions, trap handling, and robust automation pipelines. | Windows Platform Guild |
 
 </details>
 
 <details open>
-<summary><b>7. DevOps, Cloud, Containers, SRE and Incident Runbooks (17 Skills)</b></summary>
+<summary><b>7. Defensive Cybersecurity, Threat Modeling and Safe Stress Testing (7 Skills)</b></summary>
+<br>
+
+Focus: Architectural attack surface analysis, OWASP API Top 10 verification, safe load/breakpoint benchmarks, resilience faults, and credential protection.
+
+| Skill Identifier | Purpose & Capabilities | Upstream Author & Origin |
+| :--- | :--- | :--- |
+| `threat-modeling` | STRIDE-A threat modeling methodology: maps trust boundaries, analyzes privilege escalation vectors, and scores risks via DREAD. | [Microsoft & OWASP Threat Dragon](https://owasp.org/www-project-threat-dragon/) |
+| `defensive-stress-testing` | Safe developer load, stress, and breakpoint testing via k6/Locust: determines memory/connection saturation and P99 latency bounds. | [k6 Performance Engineering](https://k6.io/docs/) |
+| `api-security-testing` | Audits REST/GraphQL endpoints against OWASP API Top 10 (BOLA, mass assignment, broken auth, SSRF, and CORS origins). | [OWASP API Security Project](https://owasp.org/www-project-api-security/) |
+| `chaos-engineering` | Resilience validation and controlled fault injection (latency simulation, worker dropouts, circuit breaker trip tests). | [Principles of Chaos Engineering](https://principlesofchaos.org/) |
+| `secret-leak-prevention` | Scans git trees and pre-commit diffs for committed API keys, private tokens, and credentials via Gitleaks/TruffleHog rules. | [Gitleaks Project](https://github.com/gitleaks/gitleaks) |
+| `security-auditor` | DevSecOps static analysis checklist for OWASP Top 10 web vulnerabilities, SQLi, XSS, and authorization leaks. | DevSecOps Guild |
+| `security-review` | Audits endpoint authentication, token validation, authorization boundaries, and cryptographic configurations. | [Harshhaa](https://github.com/NotHarshhaa/devops-skills) |
+
+</details>
+
+<details open>
+<summary><b>8. DevOps, Cloud, Containers, SRE and Incident Runbooks (17 Skills)</b></summary>
 <br>
 
 Focus: Infrastructure verification, production stability patterns, container hardening, CI/CD pipeline integrity, and live SRE incident triage.
@@ -212,7 +230,7 @@ Focus: Infrastructure verification, production stability patterns, container har
 
 ### Method 1: Global Deployment (Claude Code)
 
-To link all 100 skills into your user-level Claude Code environment:
+To link all 105 skills into your user-level Claude Code environment:
 
 ```bash
 git clone https://github.com/Serion89/all-in-one-skills-for-ai.git
@@ -247,22 +265,23 @@ Copy desired skills into your project's local agent folder:
 
 ```bash
 mkdir -p .agents/skills
+cp -r path/to/all-in-one-skills-for-ai/skills/threat-modeling .agents/skills/
+cp -r path/to/all-in-one-skills-for-ai/skills/defensive-stress-testing .agents/skills/
+cp -r path/to/all-in-one-skills-for-ai/skills/api-security-testing .agents/skills/
+cp -r path/to/all-in-one-skills-for-ai/skills/secret-leak-prevention .agents/skills/
 cp -r path/to/all-in-one-skills-for-ai/skills/frontend-design .agents/skills/
-cp -r path/to/all-in-one-skills-for-ai/skills/planning-with-files .agents/skills/
 cp -r path/to/all-in-one-skills-for-ai/skills/caveman .agents/skills/
-cp -r path/to/all-in-one-skills-for-ai/skills/wayfinder .agents/skills/
-cp -r path/to/all-in-one-skills-for-ai/skills/hexagonal-architecture .agents/skills/
-cp -r path/to/all-in-one-skills-for-ai/skills/data-intensive-applications .agents/skills/
 ```
 
 ---
 
-## Security and Verification Standards
+## Security & Ethical Safeguards
 
-All skills in this repository are vetted against the following security guarantees:
-- **No Compiled Binaries**: All skills are plain Markdown text (`SKILL.md`) structured with YAML frontmatter.
-- **Zero Telemetry**: No background telemetry beacons, tracking pixels, or outbound network calls.
-- **Transparent Directives**: Every prompt directive is human-auditable prior to activation.
+All defensive cybersecurity and testing skills in this repository enforce strict ethical boundaries:
+- **Authorized Testing Only**: Stress and resilience testing skills are strictly bound to localhost, container testbeds, or authorized staging environments.
+- **No Weaponized Payloads**: Focus is purely on architectural threat modeling, input schema validation, authorization verification, and metric analysis.
+- **Zero Binary Dependencies**: All skills are human-auditable Markdown workflows (`SKILL.md`) structured with YAML frontmatter.
+- **Zero Telemetry**: No background telemetry beacons, tracking pixels, or external phone-home network calls.
 
 ---
 
