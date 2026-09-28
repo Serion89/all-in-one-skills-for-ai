@@ -29,4 +29,5 @@ if ($Target -eq "gemini" -or $Target -eq "all") {
     Write-Host "✓ Synced to Antigravity/Gemini!" -ForegroundColor Green
 }
 
-Write-Host "Done! 54 skills successfully synced." -ForegroundColor Green
+$count = (Get-ChildItem -Path $skillsSource -Directory).Count
+Write-Host "Done! $count skills successfully synced." -ForegroundColor Green

@@ -1,68 +1,66 @@
 # All-in-One Skills for AI (`all-in-one-skills-for-ai`)
 
-A modular, enterprise-grade suite of 54 production skills compliant with the [Agent Skills Open Specification](https://agentskills.io). Built for cross-agent compatibility across Claude Code, Cursor, Windsurf, GitHub Copilot CLI, Antigravity, and Codex.
+An enterprise-grade, curated suite of 85 production-ready AI Agent Skills compliant with the open [Agent Skills Specification](https://agentskills.io). Built for cross-harness compatibility across Claude Code, Cursor, Windsurf, GitHub Copilot CLI, Antigravity, Cline, and Codex.
 
 ---
 
-## Overview
+## Architecture Overview
 
-Modern AI coding agents face five systemic failure modes:
-1. **Context Bloat**: Verbose reasoning loops that exhaust token budgets and trigger early context truncation.
-2. **Premature Complexity**: Defaulting to third-party dependencies and over-engineered abstractions over native platform capabilities.
-3. **Aesthetic Homogeneity**: Low-fidelity, generic user interfaces lacking typographic rhythm, intentional color theory, and structural hierarchy.
-4. **Context Degradation**: Memory decay across multi-turn sessions leading to regressions and plan drift.
-5. **Operational Blindspots**: Generating application code without verifying security parameters, database lock contention, container efficiency, or Kubernetes manifest validity.
+Modern AI coding agents face five core limitations:
+1. **Context Exhaustion**: Unbounded reasoning and conversational pleasantries waste token budgets and cause context truncation.
+2. **Premature Abstraction**: Defaulting to third-party dependencies and over-engineered wrappers over platform primitives.
+3. **Aesthetic Drift**: Unstyled, generic components lacking typographic hierarchy, spatial rhythm, and responsive fluidity.
+4. **Context Decay**: Loss of project state across long-running sessions, causing plan drift and regressions.
+5. **Operational Blindspots**: Shipping code without verifying database lock contention, container efficiency, security boundaries, or Kubernetes manifest health.
 
-This repository resolves these bottlenecks through a modular, composable skills pipeline spanning pre-flight efficiency, high-level system reasoning, UI/UX craft, and infrastructure verification.
-
----
-
-## Agent Execution Architecture
+This collection provides a structured, multi-phase execution pipeline addressing each stage of the software lifecycle.
 
 ```mermaid
 graph TD
-    A[User Objective] --> B[Phase 1: Token & Scope Optimization]
+    A[Task Specification] --> B[Phase 1: Token & Context Optimization]
     B -->|Caveman + Ponytail| C[Phase 2: Architectural Alignment & Planning]
-    C -->|Superpowers + Manus Planning| D[Phase 3: Implementation & Craft]
-    D -->|Frontend Design + React Patterns| E[Phase 4: Verification & Testing]
-    E -->|TDD + Systematic Debugging| F[Phase 5: Infrastructure & SRE Audit]
-    F -->|Docker + K8s + Security Review| G[Production Artifact]
+    C -->|Superpowers + Matt Pocock + Manus Planning| D[Phase 3: Implementation & Craft]
+    D -->|Frontend Design + React Patterns + Systems Guild| E[Phase 4: Verification & Testing]
+    E -->|TDD + Addy Osmani Verification + Scientific Debugging| F[Phase 5: Infrastructure & SRE Audit]
+    F -->|Docker + K8s + Terraform + Bregman Incident Runbooks| G[Production Deployment]
 ```
 
 ---
 
-## Skill Directory & Attribution Index
+## Skill Directory & Attribution Index (85 Skills)
 
 <details open>
-<summary><b>1. Token Efficiency and Anti-Over-Engineering</b></summary>
+<summary><b>1. Token Efficiency, Conciseness and Anti-Over-Engineering (14 Skills)</b></summary>
 <br>
 
-Focus: Minimize token burn, strip conversational padding, and enforce strict YAGNI constraints.
+Focus: Strip conversational padding, minimize token burn, and enforce the "Lazy Senior Developer" YAGNI philosophy.
 
-| Skill | Purpose | Upstream Origin / Author |
+| Skill Identifier | Purpose & Capabilities | Upstream Author & Origin |
 | :--- | :--- | :--- |
-| `caveman` | Strips conversational glue words, pleasantries, and verbosity while retaining 100% technical fidelity. Reduces token consumption by 65% to 75%. | [Julius Brussee](https://github.com/JuliusBrussee/caveman) |
-| `caveman-commit` | Formats dense, conventional git commit messages without explanatory conversational metadata. | [Julius Brussee](https://github.com/JuliusBrussee/caveman) |
+| `caveman` | Ultra-terse communication style. Strips filler words while preserving 100% technical substance. Reduces token consumption by 65% to 75%. | [Julius Brussee](https://github.com/JuliusBrussee/caveman) |
+| `caveman-commit` | Formats dense, conventional git commit messages with zero conversational meta-commentary. | [Julius Brussee](https://github.com/JuliusBrussee/caveman) |
 | `caveman-compress` | Compresses historical conversation context, tracebacks, and log dumps into structured, high-density briefs. | [Julius Brussee](https://github.com/JuliusBrussee/caveman) |
 | `caveman-optimize` | Systematically audits prompts and context payloads to reduce multi-turn context expansion. | [Julius Brussee](https://github.com/JuliusBrussee/caveman) |
 | `ponytail` | Enforces the "Ladder of Laziness" to stop over-engineering: YAGNI -> Codebase Reuse -> Standard Library -> Platform Native -> Minimal Diff. | [Dietrich Gebert](https://github.com/DietrichGebert/ponytail) |
-| `ponytail-audit` | Audits projects for dependency sprawl, bloated packages, and superfluous abstractions. | [Dietrich Gebert](https://github.com/DietrichGebert/ponytail) |
+| `ponytail-audit` | Audits codebases for dependency sprawl, oversized npm packages, and superfluous abstractions. | [Dietrich Gebert](https://github.com/DietrichGebert/ponytail) |
 | `ponytail-debt` | Evaluates architectural debt and premature abstractions prior to feature development. | [Dietrich Gebert](https://github.com/DietrichGebert/ponytail) |
 | `investigate-first` | Blocks immediate file mutations; mandates root-cause isolation and impact analysis prior to edits. | [Dietrich Gebert](https://github.com/DietrichGebert/ponytail) |
 | `lean-build` | Minimalist build and bundle strategies prioritizing platform primitives and zero-dependency patterns. | [Dietrich Gebert](https://github.com/DietrichGebert/ponytail) |
 | `safe-refactor` | Incremental refactoring guidelines ensuring backward compatibility and regression bounds. | [Dietrich Gebert](https://github.com/DietrichGebert/ponytail) |
-| `surgical-patch` | Restricts code changes to atomic, localized line ranges rather than full-file replacements. | [Dietrich Gebert](https://github.com/DietrichGebert/ponytail) |
+| `surgical-patch` | Restricts code changes to atomic, localized line ranges rather than full-file rewrites. | [Dietrich Gebert](https://github.com/DietrichGebert/ponytail) |
 | `verify-and-stop` | Defines deterministic criteria to cease agent execution once requirements are satisfied. | [Dietrich Gebert](https://github.com/DietrichGebert/ponytail) |
+| `code-simplification` | Reduces code complexity, removes dead branches, and streamlines logic paths for readability. | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
+| `context-engineering` | Optimizes in-memory prompt structures and token distribution for complex agent tasks. | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
 
 </details>
 
 <details open>
-<summary><b>2. UI/UX and Frontend Design Systems</b></summary>
+<summary><b>2. UI/UX, Frontend Design Systems and Visual Craft (9 Skills)</b></summary>
 <br>
 
-Focus: Elevate AI-generated interfaces through curated design tokens, dynamic typography, and spatial scales.
+Focus: Replace default AI aesthetics with intentional design systems, cohesive typography, and responsive fluidity.
 
-| Skill | Purpose | Upstream Origin / Author |
+| Skill Identifier | Purpose & Capabilities | Upstream Author & Origin |
 | :--- | :--- | :--- |
 | `frontend-design` | Overrides generic AI UI conventions; establishes distinct color palettes, font pairings, spatial tension, and layout systems. | [Anthropic](https://github.com/anthropics/skills) |
 | `ui-ux-pro-max` | Comprehensive design intelligence database covering 57 UI paradigms, 95 industry palettes, and micro-interaction heuristics. | [NextLevelBuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
@@ -70,18 +68,19 @@ Focus: Elevate AI-generated interfaces through curated design tokens, dynamic ty
 | `ui-styling` | Production utility CSS and Tailwind configurations with responsiveness and dark-mode tokens. | [NextLevelBuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
 | `brand` | Enforces visual brand guidelines, asset dimensions, typography hierarchy, and tone consistency. | [NextLevelBuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
 | `banner-design` | Computes responsive layout hierarchies, visual weights, and hero asset specifications. | [NextLevelBuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
-| `react-patterns` | Idiomatic React patterns: hook boundaries, state colocation, context splitting, and render optimizations. | Community Core |
+| `browser-testing-with-devtools` | Automates Chrome DevTools inspection for layout shifts, accessibility defects, and render performance. | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
+| `react-patterns` | Idiomatic React composition: custom hook boundaries, state colocation, context splitting, and render optimizations. | Community Core |
 | `nextjs-best-practices` | App Router architecture, React Server Components (RSC), boundary orchestration, and streaming data patterns. | Vercel / Next.js Ecosystem |
 
 </details>
 
 <details open>
-<summary><b>3. Architecture, Reasoning and Complex Project Planning</b></summary>
+<summary><b>3. High-Level Thinking, Architecture and Complex Planning (26 Skills)</b></summary>
 <br>
 
-Focus: Shift from ad-hoc prompting to disciplined engineering workflows, formal planning, and test-first verification.
+Focus: Transform ad-hoc prompting into disciplined engineering methodology, persistent disk memory, and multi-agent execution.
 
-| Skill | Purpose | Upstream Origin / Author |
+| Skill Identifier | Purpose & Capabilities | Upstream Author & Origin |
 | :--- | :--- | :--- |
 | `brainstorming` | Explores problem spaces, evaluates architectural alternatives, and aligns requirements prior to coding. | [Jesse Vincent (obra)](https://github.com/obra/superpowers) |
 | `writing-plans` | Formulates step-by-step technical blueprints with explicit verification criteria for each phase. | [Jesse Vincent (obra)](https://github.com/obra/superpowers) |
@@ -93,43 +92,85 @@ Focus: Shift from ad-hoc prompting to disciplined engineering workflows, formal 
 | `requesting-code-review` | Compiles focused, context-aware review packets detailing intent, changes, and verification proof. | [Jesse Vincent (obra)](https://github.com/obra/superpowers) |
 | `receiving-code-review` | Systematically parses review comments and refactors code without defensive rationalization. | [Jesse Vincent (obra)](https://github.com/obra/superpowers) |
 | `planning-with-files` | Implements persistent markdown memory (`task_plan.md`, `findings.md`) on disk to prevent memory decay. | [Othman Adi](https://github.com/OthmanAdi/planning-with-files) |
-| `system-design` | Calculates capacity constraints (QPS, IOPS, bandwidth), evaluates CAP/ACID trade-offs, and documents architectures. | [Pinchen](https://github.com/pinchen147/system-design-skill) |
-| `architect-review` | Audits system boundaries, domain models, interface coupling, and high-load failure modes. | Software Architecture Guild |
+| `wayfinder` | Navigates unfamiliar codebases with architectural reconnaissance and dependency graphing. | [Matt Pocock](https://github.com/mattpocock/skills) |
+| `to-spec` | Interrogates ambiguous product requirements and transforms them into strict, testable specifications. | [Matt Pocock](https://github.com/mattpocock/skills) |
+| `to-tickets` | Decomposes technical specifications into atomic, dependency-sequenced engineering tickets. | [Matt Pocock](https://github.com/mattpocock/skills) |
+| `domain-modeling` | Models domain entities, aggregate roots, value objects, and invariant boundaries under DDD principles. | [Matt Pocock](https://github.com/mattpocock/skills) |
+| `codebase-design` | Establishes high-cohesion, low-coupling directory layouts and public interface contracts. | [Matt Pocock](https://github.com/mattpocock/skills) |
+| `grill-me` | Interactive interview loop that challenges hidden assumptions and edge cases before implementation. | [Matt Pocock](https://github.com/mattpocock/skills) |
+| `resolving-merge-conflicts` | Structured protocol for diagnosing and resolving complex three-way git merge conflicts. | [Matt Pocock](https://github.com/mattpocock/skills) |
+| `triage` | Systematically reproduces bug reports, isolates environments, and establishes minimal failure cases. | [Matt Pocock](https://github.com/mattpocock/skills) |
+| `spec-driven-development` | Enforces engineering specifications as the single source of truth prior to code generation. | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
+| `source-driven-development` | Grounds all agent modifications strictly in verifiable source code evidence. | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
+| `constraint-driven-development` | Solves problems within strict runtime constraints (latency, memory, backwards compatibility). | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
+| `doubt-driven-development` | Actively stress-tests agent hypotheses with critical skepticism before committing changes. | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
+| `incremental-implementation` | Delivers complex systems in small, independently verifiable commits. | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
+| `idea-refine` | Sharpens abstract feature ideas into structured engineering proposals. | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
+| `interview-me` | Conducts stakeholder discovery interviews to surface implicit business requirements. | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
+| `documentation-and-adrs` | Generates Architectural Decision Records (ADRs) and living system documentation. | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
+
+</details>
+
+<details open>
+<summary><b>4. Software Quality, Testing and Scientific Debugging (8 Skills)</b></summary>
+<br>
+
+Focus: Scientific root-cause analysis, strict test-driven development, and clean code hygiene.
+
+| Skill Identifier | Purpose & Capabilities | Upstream Author & Origin |
+| :--- | :--- | :--- |
 | `clean-code` | Enforces structural readability, meaningful symbol naming, function purity, and single-responsibility boundaries. | Robert C. Martin ("Uncle Bob") |
 | `code-reviewer` | Evaluates pull requests for race conditions, resource leaks, edge-case coverage, and API ergonomics. | Staff Reviewer Guild |
 | `systematic-debugging` | 4-phase diagnostic loop: Reproduce -> Isolate Root Cause -> Formulate Hypothesis -> Prove Resolution. | Systems Reliability Guild |
 | `test-driven-development` | Enforces the Red-Green-Refactor discipline: tests must fail before code implementation begins. | Kent Beck / TDD Core |
 | `tdd-workflow` | Manages test suites across unit, integration, end-to-end, and property-based validation layers. | TDD Frameworks |
+| `debugging-toolkit` | Diagnostic tooling integration for interactive memory examination and core dump analysis. | Systems Diagnostic Guild |
 | `effective-agent-skills` | Meta-skill for authoring, linting, and evaluating agent skills under the open specification. | [AgentSkills.io](https://agentskills.io) |
+| `deprecation-and-migration` | Manages graceful API deprecation cycles, migration paths, and backwards-compatible adapters. | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
 
 </details>
 
 <details open>
-<summary><b>4. Backend, Database and DevSecOps</b></summary>
+<summary><b>5. Systems Programming and Language Mastery (3 Skills)</b></summary>
 <br>
 
-Focus: Resilient data layers, schema migration safety, security posture, and runtime profiling.
+Focus: Idiomatic language features, memory safety, RAII, and zero-cost abstractions.
 
-| Skill | Purpose | Upstream Origin / Author |
+| Skill Identifier | Purpose & Capabilities | Upstream Author & Origin |
 | :--- | :--- | :--- |
+| `rust-pro` | Idiomatic Rust 1.75+: borrow checker navigation, RAII, lifetime elision, Tokio async runtimes, and unsafe encapsulation. | Systems Programming Guild |
+| `cpp-pro` | Modern C++20/C++23: RAII, move semantics, smart pointers, concept constraints, and STL algorithm dispatch. | Modern C++ Architecture Guild |
+| `c-pro` | Strict C11 memory safety, pointer arithmetic bounds, manual allocation tracking, and POSIX compliance. | Low-Level Systems Guild |
+
+</details>
+
+<details open>
+<summary><b>6. Backend Architecture, Databases and DevSecOps (9 Skills)</b></summary>
+<br>
+
+Focus: Resilient database layers, schema migration safety, security posture, and runtime profiling.
+
+| Skill Identifier | Purpose & Capabilities | Upstream Author & Origin |
+| :--- | :--- | :--- |
+| `system-design` | Calculates capacity constraints (QPS, IOPS, bandwidth), evaluates CAP/ACID trade-offs, and documents architectures. | [Pinchen](https://github.com/pinchen147/system-design-skill) |
+| `architect-review` | Audits system boundaries, domain models, interface coupling, and high-load failure modes. | Software Architecture Guild |
+| `api-and-interface-design` | Designs resilient REST, RPC, and GraphQL interfaces with idempotency, versioning, and rate limiting. | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
 | `database` | Relational and document data modeling, query analysis, index selection, and transaction isolation. | Systems Database Guild |
 | `db-review` | Inspects migration scripts for locking behavior, table rewrites, connection exhaustion, and rollback safety. | [Harshhaa](https://github.com/NotHarshhaa/devops-skills) |
 | `security-auditor` | Evaluates source code for OWASP Top 10 vulnerabilities, credential leakage, and insecure deserialization. | DevSecOps Guild |
 | `security-review` | Audits endpoint authentication, token validation, authorization boundaries, and cryptographic configurations. | [Harshhaa](https://github.com/NotHarshhaa/devops-skills) |
 | `performance-profiling` | Profiles CPU, memory allocation, garbage collection pressure, and I/O bottlenecks. | Systems Engineering Guild |
 | `powershell-windows` | Cross-platform and Windows PowerShell conventions, trap handling, and robust automation pipelines. | Windows Platform Guild |
-| `git-pr-review` | Generates token-efficient pull request summaries directly from git commit graphs and diff trees. | Developer Productivity Guild |
-| `debugging-toolkit` | Diagnostic tooling integration for interactive memory examination and core dump analysis. | Systems Diagnostic Guild |
 
 </details>
 
 <details open>
-<summary><b>5. DevOps, Cloud, Containers and SRE</b></summary>
+<summary><b>7. DevOps, Cloud, Containers, SRE and Incident Runbooks (16 Skills)</b></summary>
 <br>
 
-Focus: Infrastructure verification, container hardening, CI/CD pipeline integrity, and incident triage.
+Focus: Infrastructure verification, container hardening, CI/CD pipeline integrity, and live SRE incident triage.
 
-| Skill | Purpose | Upstream Origin / Author |
+| Skill Identifier | Purpose & Capabilities | Upstream Author & Origin |
 | :--- | :--- | :--- |
 | `docker-review` | Hardens Dockerfiles using multi-stage builds, non-root users, layer caching, and minimal base images. | [Harshhaa](https://github.com/NotHarshhaa/devops-skills) |
 | `k8s-review` | Validates Kubernetes resources, Helm templates, PodSecurityStandards, resource quotas, and RBAC policies. | [Harshhaa](https://github.com/NotHarshhaa/devops-skills) |
@@ -139,23 +180,31 @@ Focus: Infrastructure verification, container hardening, CI/CD pipeline integrit
 | `observability` | Configures structured logging, Prometheus metric semantics, trace propagation, and alert thresholds. | [Harshhaa](https://github.com/NotHarshhaa/devops-skills) |
 | `gitops-review` | Validates ArgoCD and Flux manifests for reconciliation loops, state drift, and target branch protections. | [Harshhaa](https://github.com/NotHarshhaa/devops-skills) |
 | `release-readiness` | Pre-deployment verification gate: schema compatibility, canary checks, smoke tests, and rollback strategies. | [Harshhaa](https://github.com/NotHarshhaa/devops-skills) |
+| `shipping-and-launch` | Production launch checklist covering feature flags, smoke tests, and operational monitors. | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
+| `git-pr-review` | Generates token-efficient pull request summaries directly from git commit graphs and diff trees. | Developer Productivity Guild |
+| `diagnose-crashloop` | SRE runbook for diagnosing Kubernetes CrashLoopBackOff, container exits, and OOMKilled events. | [Arie Bregman](https://github.com/bregman-arie/devops-sre-skills) |
+| `sev1-first-15-minutes` | Incident commander protocol for high-severity outages: containment, blast radius assessment, and status pages. | [Arie Bregman](https://github.com/bregman-arie/devops-sre-skills) |
+| `triage-cost-spike` | Investigates sudden cloud infrastructure cost increases across compute, network egress, and storage. | [Arie Bregman](https://github.com/bregman-arie/devops-sre-skills) |
+| `triage-error-budget-burn` | Audits SLO/SLI error budget consumption and triggers automated release freezes if thresholds breach. | [Arie Bregman](https://github.com/bregman-arie/devops-sre-skills) |
+| `triage-latency-regression` | Isolates backend latency spikes across microservices, database connection queues, and external APIs. | [Arie Bregman](https://github.com/bregman-arie/devops-sre-skills) |
+| `recover-state-lock` | Safely diagnoses and unlocks corrupted or stale Terraform state locks without data loss. | [Arie Bregman](https://github.com/bregman-arie/devops-sre-skills) |
 
 </details>
 
 ---
 
-## Installation and Deployment
+## Installation & Environment Synchronization
 
-### Global Deployment (Claude Code)
+### Method 1: Global Deployment (Claude Code)
 
-To link all 54 skills into your user-level Claude Code configuration:
+To link all 85 skills into your user-level Claude Code environment:
 
 ```bash
 git clone https://github.com/Serion89/all-in-one-skills-for-ai.git
 cp -r all-in-one-skills-for-ai/skills/* ~/.claude/skills/
 ```
 
-### Global Deployment (Antigravity / Gemini CLI)
+### Method 2: Global Deployment (Antigravity / Gemini CLI)
 
 On Windows (PowerShell):
 ```powershell
@@ -168,38 +217,40 @@ mkdir -p ~/.gemini/config/skills
 cp -r all-in-one-skills-for-ai/skills/* ~/.gemini/config/skills/
 ```
 
-### Automated Workspace Sync
+### Method 3: Automated Workspace Sync
 
-A helper script is provided to automate synchronization across target environments:
+A built-in PowerShell script synchronizes the skill library across installed agent environments:
 
 ```powershell
 # Windows PowerShell
 .\sync.ps1 -Target all     # Options: claude, gemini, all
 ```
 
-### Project-Level Deployment (Cursor, Windsurf, Cline)
+### Method 4: Project-Specific Deployment (Cursor, Windsurf, Cline)
 
-Copy desired skills directly into your project's agent directory:
+Copy desired skills into your project's local agent folder:
 
 ```bash
 mkdir -p .agents/skills
 cp -r path/to/all-in-one-skills-for-ai/skills/frontend-design .agents/skills/
-cp -r path/to/all-in-one-skills-for-ai/skills/caveman .agents/skills/
 cp -r path/to/all-in-one-skills-for-ai/skills/planning-with-files .agents/skills/
+cp -r path/to/all-in-one-skills-for-ai/skills/caveman .agents/skills/
+cp -r path/to/all-in-one-skills-for-ai/skills/wayfinder .agents/skills/
 ```
 
 ---
 
-## Security Policy
+## Security and Verification Standards
 
-- **No Executable Binaries**: All skills are plain Markdown text (`SKILL.md`) structured with YAML frontmatter.
-- **No Background Telemetry**: Zero network calls, telemetry beacons, or external dependencies.
-- **Transparent Directives**: Every instruction set is human-readable and inspectable prior to activation.
+All skills in this repository are vetted against the following security guarantees:
+- **No Compiled Binaries**: All skills are plain Markdown text (`SKILL.md`) structured with YAML frontmatter.
+- **Zero Telemetry**: No background telemetry beacons, tracking pixels, or outbound network calls.
+- **Transparent Directives**: Every prompt directive is human-auditable prior to activation.
 
 ---
 
 ## License and Attribution
 
-This meta-repository is curated and maintained by [Serion89](https://github.com/Serion89). 
+This meta-repository is curated and maintained by [Serion89](https://github.com/Serion89).
 
-All upstream skills are credited to their respective original authors and maintainers under their respective open-source licenses (MIT / Apache 2.0). Individual copyright notices and licenses reside within their respective upstream repositories linked in the index above.
+All upstream skills are credited to their respective original authors and maintainers under their open-source licenses (MIT / Apache 2.0). Individual copyright notices and licenses reside within their respective upstream repositories linked in the index above.
