@@ -1,25 +1,59 @@
-# All-in-One Skills for AI (`all-in-one-skills-for-ai`)
+<div align="center">
 
-An enterprise-grade, curated suite of 115 production-ready AI Agent Skills compliant with the open [Agent Skills Specification](https://agentskills.io). Built for cross-harness compatibility across Claude Code, Cursor, Windsurf, GitHub Copilot CLI, Antigravity, Cline, and Codex.
+<img src="assets/hero.svg" alt="All-In-One Skills For AI Hero Banner" width="100%">
+
+<a href="https://github.com/Serion89/all-in-one-skills-for-ai">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=15&duration=2400&pause=1000&color=58A6FF&center=true&vCenter=true&width=760&lines=Deterministic+Agentic+Harness+for+Claude+Code%2C+Cursor%2C+Windsurf+%26+Antigravity;115+Audited+Skills+%7C+12+Specialized+Domains+%7C+Zero+Opaque+Binaries;Token+Compression+%7C+Architectural+Invariants+%7C+SRE+Runbooks;Production-Hardened+Intelligence+for+Autonomous+Software+Engineering" alt="Typing SVG">
+</a>
+
+<p align="center">
+  <a href="https://github.com/Serion89/all-in-one-skills-for-ai"><img src="https://img.shields.io/badge/skills-115%20verified-0d1117?style=flat-square&logo=git&logoColor=white&labelColor=161b22" alt="Skills"></a>
+  <a href="https://agentskills.io"><img src="https://img.shields.io/badge/spec-agentskills.io-0d1117?style=flat-square&labelColor=161b22" alt="Spec"></a>
+  <a href="#security--verification-standards"><img src="https://img.shields.io/badge/telemetry-zero-0d1117?style=flat-square&labelColor=161b22" alt="Telemetry"></a>
+  <a href="#domain-navigation-matrix"><img src="https://img.shields.io/badge/domains-12%20specialized-0d1117?style=flat-square&labelColor=161b22" alt="Domains"></a>
+  <a href="#license-and-attribution"><img src="https://img.shields.io/badge/license-MIT%20%2F%20Apache-0d1117?style=flat-square&labelColor=161b22" alt="License"></a>
+</p>
+
+An enterprise-grade, curated suite of 115 production-ready AI Agent Skills compliant with the open Agent Skills Specification. Built for universal compatibility across Claude Code, Cursor, Windsurf, GitHub Copilot CLI, Antigravity, Cline, and Codex.
+
+[Quickstart](#installation--environment-synchronization) &bull; [Behavioral Comparison](#behavioral-impact-matrix) &bull; [Execution Bus](#execution-pipeline) &bull; [Domain Index](#domain-navigation-matrix) &bull; [Security Protocol](#security--verification-standards)
+
+</div>
 
 ---
 
-## Architectural Taxonomy
+## Behavioral Shift: Default Agent vs. All-in-One Harness
 
-Modern AI coding agents face seven systemic failure modes:
-1. **Context Exhaustion**: Unbounded reasoning loops and conversational pleasantries waste token budgets and cause premature context truncation.
-2. **Premature Abstraction**: Defaulting to third-party dependencies and over-engineered wrappers over native platform primitives.
-3. **Aesthetic Drift**: Unstyled, generic user interfaces lacking typographic hierarchy, spatial tension, and responsive fluidity.
-4. **Context Decay**: Loss of project state and architectural invariants across long-running sessions, causing plan drift and regressions.
-5. **Operational Blindspots**: Shipping code without verifying database lock contention, low-latency allocations, container efficiency, or Kubernetes manifest health.
-6. **Security Vulnerabilities**: Deploying endpoints without verifying authorization boundaries (BOLA/BFLA), input schemas, or secret exposure.
-7. **Integration Brittleness**: Microservices breaking across releases due to unverified API contracts and absent load boundaries.
+Standard autonomous agents default to predictable failure modes under complex workloads: conversational token exhaustion, premature package sprawl, aesthetic drift, unverified security boundaries, and absent operational runbooks.
 
-This repository resolves these bottlenecks through a modular, composable skills pipeline structured into 12 granular engineering domains.
+<div align="center">
+  <img src="assets/terminal-compare.svg" alt="Behavioral Comparison Terminal" width="100%">
+</div>
+
+### Behavioral Impact Matrix
+
+| Dimension | Default Agent Behavior | With All-in-One Harness | Measured Outcome |
+| :--- | :--- | :--- | :--- |
+| **Token Economy** | Conversational filler, repeated logs | `caveman` + `ponytail` + `token-budget-advisor` | **65% to 75% token reduction** |
+| **Code Structure** | Installing packages for trivial tasks | Ladder of Laziness: YAGNI -> Platform Native | **Zero superfluous dependencies** |
+| **UI/UX Craft** | Generic cards, browser default styling | `frontend-design` + `impeccable` + `design-system` | **Bespoke palettes & typography** |
+| **Session Memory** | Context decay across compaction | `planning-with-files` (Manus-style disk memory) | **Continuous state preservation** |
+| **API Quality** | Ad-hoc endpoints, untested edge cases | `contract-testing-pact` + `graphql` + `grpc` | **Deterministic, typed contracts** |
+| **Infrastructure** | Blind file generation | SRE runbooks + `k8s-review` + `terraform-review` | **Production-hardened manifests** |
+| **Cybersecurity** | Implicit trust in client headers | `threat-modeling` (STRIDE) + OWASP API Top 10 | **Defense-in-depth verification** |
+
+---
+
+## Execution Pipeline
+
+<div align="center">
+  <img src="assets/pipeline.svg" alt="Agent Execution Bus" width="100%">
+</div>
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#161b22', 'primaryTextColor': '#c9d1d9', 'primaryBorderColor': '#30363d', 'lineColor': '#58a6ff', 'secondaryColor': '#0d1117', 'tertiaryColor': '#1f242c' }}}%%
 graph TD
-    A[Task Specification] --> B[Phase 1: Token & Context Economy]
+    A[Task Ingestion] --> B[Phase 1: Token & Context Economy]
     B -->|Caveman + Ponytail + Budget Advisor| C[Phase 2: Ideation, Alignment & Threat Modeling]
     C -->|Brainstorming + STRIDE + Matt Pocock Interrogation| D[Phase 3: Architecture & System Design]
     D -->|Hexagonal + DDIA + Ousterhout Deep Modules + Manus Planning| E[Phase 4: Implementation & Visual Craft]
@@ -31,10 +65,29 @@ graph TD
 
 ---
 
+## Domain Navigation Matrix
+
+| Index | Domain Focus | Modules | Direct Jump |
+| :-: | :--- | :-: | :--- |
+| **01** | Token Efficiency & Context Economy | 09 | [Section 01 &rarr;](#01-token-efficiency-and-context-economy-9-skills) |
+| **02** | Minimalist Architecture & Anti-Over-Engineering | 06 | [Section 02 &rarr;](#02-minimalist-architecture-and-anti-over-engineering-6-skills) |
+| **03** | UI/UX Foundations, Design Systems & Visual Craft | 09 | [Section 03 &rarr;](#03-uiux-foundations-design-systems-and-visual-craft-9-skills) |
+| **04** | Frontend Frameworks, Mobile & Web Performance | 05 | [Section 04 &rarr;](#04-frontend-frameworks-mobile-and-web-performance-5-skills) |
+| **05** | Ideation, Alignment & Requirement Discovery | 08 | [Section 05 &rarr;](#05-ideation-alignment-and-requirement-discovery-8-skills) |
+| **06** | Engineering Planning & Multi-Agent Orchestration | 08 | [Section 06 &rarr;](#06-engineering-planning-task-breakdown-and-multi-agent-orchestration-8-skills) |
+| **07** | Architectural Principles, DDD & Classical Literature | 08 | [Section 07 &rarr;](#07-architectural-principles-domain-modeling-and-classical-literature-8-skills) |
+| **08** | Testing Disciplines, Code Review & Scientific Debugging | 11 | [Section 08 &rarr;](#08-testing-disciplines-code-review-and-scientific-debugging-11-skills) |
+| **09** | Systems Programming & Polyglot Languages | 05 | [Section 09 &rarr;](#09-systems-programming-and-polyglot-languages-5-skills) |
+| **10** | Backend Architecture, Distributed Data & Search | 14 | [Section 10 &rarr;](#10-backend-architecture-distributed-data-and-search-14-skills) |
+| **11** | Defensive Cybersecurity, Threat Modeling & Safe Stress Testing | 08 | [Section 11 &rarr;](#11-defensive-cybersecurity-threat-modeling-and-safe-stress-testing-8-skills) |
+| **12** | DevOps, Cloud Infrastructure, Containers, SRE & Maintenance | 24 | [Section 12 &rarr;](#12-devops-cloud-infrastructure-containers-sre-and-maintenance-24-skills) |
+
+---
+
 ## Granular Skill Directory & Attribution Index (115 Skills)
 
 <details open>
-<summary><b>1. Token Efficiency and Context Economy (9 Skills)</b></summary>
+<summary><b>01. Token Efficiency and Context Economy (9 Skills)</b></summary>
 <br>
 
 Focus: Strip conversational padding, minimize token burn, and maintain optimal in-memory prompt structures.
@@ -54,7 +107,7 @@ Focus: Strip conversational padding, minimize token burn, and maintain optimal i
 </details>
 
 <details open>
-<summary><b>2. Minimalist Architecture and Anti-Over-Engineering (6 Skills)</b></summary>
+<summary><b>02. Minimalist Architecture and Anti-Over-Engineering (6 Skills)</b></summary>
 <br>
 
 Focus: Enforce YAGNI principles, prevent dependency sprawl, and produce surgical, atomic code modifications.
@@ -71,7 +124,7 @@ Focus: Enforce YAGNI principles, prevent dependency sprawl, and produce surgical
 </details>
 
 <details open>
-<summary><b>3. UI/UX Foundations, Design Systems and Visual Craft (9 Skills)</b></summary>
+<summary><b>03. UI/UX Foundations, Design Systems and Visual Craft (9 Skills)</b></summary>
 <br>
 
 Focus: Establish intentional design tokens, typography ladders, micro-interactions, and accessibility standards.
@@ -91,7 +144,7 @@ Focus: Establish intentional design tokens, typography ladders, micro-interactio
 </details>
 
 <details open>
-<summary><b>4. Frontend Frameworks, Mobile and Web Performance (5 Skills)</b></summary>
+<summary><b>04. Frontend Frameworks, Mobile and Web Performance (5 Skills)</b></summary>
 <br>
 
 Focus: Component composition, cross-platform mobile patterns, and Google Core Web Vitals optimization.
@@ -107,7 +160,7 @@ Focus: Component composition, cross-platform mobile patterns, and Google Core We
 </details>
 
 <details open>
-<summary><b>5. Ideation, Alignment and Requirement Discovery (8 Skills)</b></summary>
+<summary><b>05. Ideation, Alignment and Requirement Discovery (8 Skills)</b></summary>
 <br>
 
 Focus: Interrogate ambiguous product needs, surface hidden assumptions, and formulate formal engineering specifications.
@@ -126,7 +179,7 @@ Focus: Interrogate ambiguous product needs, surface hidden assumptions, and form
 </details>
 
 <details open>
-<summary><b>6. Engineering Planning, Task Breakdown and Multi-Agent Orchestration (8 Skills)</b></summary>
+<summary><b>06. Engineering Planning, Task Breakdown and Multi-Agent Orchestration (8 Skills)</b></summary>
 <br>
 
 Focus: Persistent memory on disk, sequential plan execution, and distributed subagent delegation.
@@ -145,7 +198,7 @@ Focus: Persistent memory on disk, sequential plan execution, and distributed sub
 </details>
 
 <details open>
-<summary><b>7. Architectural Principles, Domain Modeling and Classical Literature (8 Skills)</b></summary>
+<summary><b>07. Architectural Principles, Domain Modeling and Classical Literature (8 Skills)</b></summary>
 <br>
 
 Focus: Ground systems in domain boundaries, deep modular encapsulation, and classic engineering literature.
@@ -164,7 +217,7 @@ Focus: Ground systems in domain boundaries, deep modular encapsulation, and clas
 </details>
 
 <details open>
-<summary><b>8. Testing Disciplines, Code Review and Scientific Debugging (11 Skills)</b></summary>
+<summary><b>08. Testing Disciplines, Code Review and Scientific Debugging (11 Skills)</b></summary>
 <br>
 
 Focus: Red-Green-Refactor test loops, consumer contracts, rigorous peer review, and 4-phase scientific root-cause isolation.
@@ -186,7 +239,7 @@ Focus: Red-Green-Refactor test loops, consumer contracts, rigorous peer review, 
 </details>
 
 <details open>
-<summary><b>9. Systems Programming and Polyglot Languages (5 Skills)</b></summary>
+<summary><b>09. Systems Programming and Polyglot Languages (5 Skills)</b></summary>
 <br>
 
 Focus: Idiomatic language models, memory safety, RAII, concurrency, and high-throughput backends.
@@ -246,7 +299,7 @@ Focus: STRIDE-A threat modeling, OWASP API Top 10 verification, safe load/breakp
 </details>
 
 <details open>
-<summary><b>12. DevOps, Cloud Infrastructure, Containers, SRE and Maintenance (18 Skills)</b></summary>
+<summary><b>12. DevOps, Cloud Infrastructure, Containers, SRE and Maintenance (24 Skills)</b></summary>
 <br>
 
 Focus: Infrastructure verification, production stability patterns, container hardening, CI/CD pipeline integrity, and live SRE incident triage.
@@ -284,16 +337,22 @@ Focus: Infrastructure verification, production stability patterns, container har
 
 ## Installation & Environment Synchronization
 
-### Method 1: Global Deployment (Claude Code)
+Supported environments: **Claude Code**, **Cursor**, **Windsurf**, **Antigravity / Gemini CLI**, **GitHub Copilot CLI**, and **Cline**.
 
-To link all 115 skills into your user-level Claude Code environment:
+### Quick Deployment
 
 ```bash
+# Clone the unified harness repository
 git clone https://github.com/Serion89/all-in-one-skills-for-ai.git
+```
+
+#### Method 1: Global Deployment (Claude Code)
+
+```bash
 cp -r all-in-one-skills-for-ai/skills/* ~/.claude/skills/
 ```
 
-### Method 2: Global Deployment (Antigravity / Gemini CLI)
+#### Method 2: Global Deployment (Antigravity / Gemini CLI)
 
 On Windows (PowerShell):
 ```powershell
@@ -306,7 +365,7 @@ mkdir -p ~/.gemini/config/skills
 cp -r all-in-one-skills-for-ai/skills/* ~/.gemini/config/skills/
 ```
 
-### Method 3: Automated Workspace Sync
+#### Method 3: Automated Workspace Sync
 
 A built-in PowerShell script synchronizes the skill library across installed agent environments:
 
@@ -315,9 +374,9 @@ A built-in PowerShell script synchronizes the skill library across installed age
 .\sync.ps1 -Target all     # Options: claude, gemini, all
 ```
 
-### Method 4: Project-Specific Deployment (Cursor, Windsurf, Cline)
+#### Method 4: Project-Specific Deployment (Cursor, Windsurf, Cline)
 
-Copy desired skills into your project's local agent folder:
+Copy desired skills directly into your project's agent skills directory:
 
 ```bash
 mkdir -p .agents/skills
@@ -331,13 +390,14 @@ cp -r path/to/all-in-one-skills-for-ai/skills/event-driven-architecture .agents/
 
 ---
 
-## Security & Ethical Safeguards
+## Security & Verification Standards
 
-All defensive cybersecurity and testing skills in this repository enforce strict ethical boundaries:
-- **Authorized Testing Only**: Stress and resilience testing skills are strictly bound to localhost, container testbeds, or authorized staging environments.
-- **No Weaponized Payloads**: Focus is purely on architectural threat modeling, input schema validation, authorization verification, and metric analysis.
-- **Zero Binary Dependencies**: All skills are human-auditable Markdown workflows (`SKILL.md`) structured with YAML frontmatter.
-- **Zero Telemetry**: No background telemetry beacons, tracking pixels, or external phone-home network calls.
+| Security Requirement | Implementation | Guarantee |
+| :--- | :--- | :--- |
+| **Zero Opaque Binaries** | Every skill is pure Markdown (`SKILL.md`) structured with YAML frontmatter | 100% human-auditable source code |
+| **Zero Telemetry** | No external beacons, tracking pixels, or phone-home network calls | Total air-gap and privacy compliance |
+| **Safe Stress Bounds** | Load and resilience testing skills include mandatory local limits | Zero unauthorized external denial-of-service |
+| **Transparent Directives** | Every reasoning constraint and prompt instruction is fully inspectable | No hidden prompt injections or silent mutations |
 
 ---
 

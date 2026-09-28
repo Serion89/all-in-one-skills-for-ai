@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 320" width="100%" height="320" fill="none">
+  <defs>
+    <linearGradient id="term-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a11" />
+      <stop offset="100%" stop-color="#0d1117" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    .pane-title {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .code-text {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 11px;
+      line-height: 18px;
+    }
+  </style>
+
+  <!-- Container -->
+  <rect width="880" height="320" rx="10" fill="url(#term-bg)" stroke="#30363d" stroke-width="1.2" />
+
+  <!-- Section Top Label -->
+  <text x="24" y="24" font-family="ui-monospace, monospace" font-size="10" font-weight="600" fill="#8b949e" letter-spacing="1px">BEHAVIORAL COMPARISON // DEFAULT AGENT VS ALL-IN-ONE HARNESS</text>
+
+  <!-- LEFT PANE: UNCONSTRAINED AGENT -->
+  <g transform="translate(24, 38)">
+    <rect width="406" height="262" rx="8" fill="#11161f" stroke="#30363d" stroke-width="1" />
+    <!-- Title bar -->
+    <rect width="406" height="30" rx="8" fill="#161b22" />
+    <circle cx="16" cy="15" r="4" fill="#f85149" opacity="0.8" />
+    <circle cx="28" cy="15" r="4" fill="#d29922" opacity="0.8" />
+    <circle cx="40" cy="15" r="4" fill="#3fb950" opacity="0.8" />
+    <text x="56" y="19" class="pane-title" fill="#f85149">DEFAULT AGENT // UNCONSTRAINED</text>
+    <rect x="300" y="7" width="94" height="16" rx="3" fill="#f85149" fill-opacity="0.15" />
+    <text x="308" y="19" font-family="ui-monospace, monospace" font-size="9" font-weight="600" fill="#f85149">3,850 TOKENS</text>
+
+    <!-- Content -->
+    <g transform="translate(16, 48)" class="code-text">
+      <text y="0" fill="#6e7681">&gt; Task: Build secure tenant token verifier</text>
+      <text y="22" fill="#8b949e">"Hello! Absolutely, I can certainly write</text>
+      <text y="40" fill="#8b949e">that for you! First, let's install 7 new</text>
+      <text y="58" fill="#8b949e">dependencies from npm..."</text>
+      <text y="82" fill="#f85149">[-] Memory leak: Global unbounded cache</text>
+      <text y="100" fill="#f85149">[-] Security: Missing tenant boundary check</text>
+      <text y="118" fill="#f85149">[-] Architecture: 4 redundant abstractions</text>
+      <text y="136" fill="#f85149">[-] Verification: Zero automated tests</text>
+      <text y="160" fill="#e6edf3">Outcome: Context exhaustion &amp; regressions</text>
+      <text y="180" fill="#f85149" font-weight="600">STATE: UNSTABLE IN PRODUCTION</text>
+    </g>
+  </g>
+
+  <!-- RIGHT PANE: HARNESS ENHANCED -->
+  <g transform="translate(450, 38)">
+    <rect width="406" height="262" rx="8" fill="#11161f" stroke="#30363d" stroke-width="1" />
+    <!-- Title bar -->
+    <rect width="406" height="30" rx="8" fill="#161b22" />
+    <circle cx="16" cy="15" r="4" fill="#f85149" opacity="0.8" />
+    <circle cx="28" cy="15" r="4" fill="#d29922" opacity="0.8" />
+    <circle cx="40" cy="15" r="4" fill="#3fb950" opacity="0.8" />
+    <text x="56" y="19" class="pane-title" fill="#3fb950">ALL-IN-ONE HARNESS // PRECISION</text>
+    <rect x="310" y="7" width="84" height="16" rx="3" fill="#3fb950" fill-opacity="0.15" />
+    <text x="318" y="19" font-family="ui-monospace, monospace" font-size="9" font-weight="600" fill="#3fb950">280 TOKENS</text>
+
+    <!-- Content -->
+    <g transform="translate(16, 48)" class="code-text">
+      <text y="0" fill="#6e7681">&gt; Task: Build secure tenant token verifier</text>
+      <text y="22" fill="#58a6ff">[STRIDE] Threat model: BOLA risk isolated</text>
+      <text y="40" fill="#7ee787">[LADDER] Zero deps: Native crypto.subtle</text>
+      <text y="58" fill="#7ee787">[ISOLATE] Tenant ID strictly bound in claims</text>
+      <text y="82" fill="#3fb950">[+] Generated: src/auth/verifier.ts (24 LOC)</text>
+      <text y="100" fill="#3fb950">[+] Pact contract: contract/auth.pact.json</text>
+      <text y="118" fill="#3fb950">[+] Tests: 12 passing | 100% branch coverage</text>
+      <text y="136" fill="#3fb950">[+] Status: verify-and-stop criteria met</text>
+      <text y="160" fill="#e6edf3">Outcome: 92% token savings &amp; zero regressions</text>
+      <text y="180" fill="#3fb950" font-weight="600">STATE: AUDITED &amp; PRODUCTION-READY<tspan fill="#3fb950" class="cursor">&#9646;</tspan></text>
+    </g>
+  </g>
+</svg>
