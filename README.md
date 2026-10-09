@@ -3,7 +3,7 @@
 <img src="assets/hero.svg" alt="All-In-One Skills For AI Banner" width="100%">
 
 <p align="center">
-  <a href="https://github.com/Serion89/all-in-one-skills-for-ai"><img src="https://img.shields.io/badge/skills-117%20verified-0d1117?style=flat-square&logo=git&logoColor=white&labelColor=161b22" alt="Skills"></a>
+  <a href="https://github.com/Serion89/all-in-one-skills-for-ai"><img src="https://img.shields.io/badge/skills-124%20verified-0d1117?style=flat-square&logo=git&logoColor=white&labelColor=161b22" alt="Skills"></a>
   <a href="https://agentskills.io"><img src="https://img.shields.io/badge/spec-agentskills.io-0d1117?style=flat-square&labelColor=161b22" alt="Spec"></a>
   <a href="#security--verification-standards"><img src="https://img.shields.io/badge/telemetry-zero-0d1117?style=flat-square&labelColor=161b22" alt="Telemetry"></a>
   <a href="#domain-navigation-matrix"><img src="https://img.shields.io/badge/domains-12%20specialized-0d1117?style=flat-square&labelColor=161b22" alt="Domains"></a>
@@ -11,7 +11,7 @@
   <a href="#license-and-attribution"><img src="https://img.shields.io/badge/license-MIT%20%2F%20Apache-0d1117?style=flat-square&labelColor=161b22" alt="License"></a>
 </p>
 
-A curated collection of 117 verified agent skills conforming to the open [Agent Skills Specification](https://agentskills.io). Compatible with Claude Code, Cursor, Windsurf, Antigravity, GitHub Copilot CLI, and Cline.
+A curated collection of 124 verified agent skills conforming to the open [Agent Skills Specification](https://agentskills.io). Compatible with Claude Code, Cursor, Windsurf, Antigravity, GitHub Copilot CLI, and Cline.
 
 [Environment Setup](#interactive-installation-guide) &bull; [Behavioral Comparison](#default-agent-vs-all-in-one-harness) &bull; [Execution Lifecycle](#agent-execution-lifecycle) &bull; [Operational Playbooks](#operational-playbooks) &bull; [Domain Index](#domain-navigation-matrix) &bull; [Maintainer](#project-maintainer)
 
@@ -27,7 +27,7 @@ Choose your target coding assistant below to copy the direct setup command:
 <summary><b>Claude Code (~/.claude/skills)</b></summary>
 <br>
 
-Installs all 117 skills globally for Claude Code CLI:
+Installs all 124 skills globally for Claude Code CLI:
 
 ```bash
 # Clone and copy into Claude Code global skills path
@@ -39,7 +39,7 @@ cp -r all-in-one-skills-for-ai/skills/* ~/.claude/skills/
 Verify in Claude Code:
 ```text
 /skills
-# Output: 117 loaded skills (caveman, ponytail, threat-modeling, hexagonal-architecture, etc.)
+# Output: 124 loaded skills (caveman, ponytail, threat-modeling, hexagonal-architecture, etc.)
 ```
 
 </details>
@@ -250,10 +250,11 @@ Preventing agents from importing heavy third-party libraries for simple algorith
 | **11** | Defensive Cybersecurity, Threat Modeling & Safe Stress Testing | 08 | [Section 11 &rarr;](#11-defensive-cybersecurity-threat-modeling-and-safe-stress-testing-8-skills) |
 | **12** | DevOps, Cloud Infrastructure, Containers, SRE & Maintenance | 24 | [Section 12 &rarr;](#12-devops-cloud-infrastructure-containers-sre-and-maintenance-24-skills) |
 | **13** | Original Engineering Disciplines: ML & Embedded Systems | 02 | [Section 13 &rarr;](#13-original-engineering-disciplines-ml-and-embedded-systems-2-skills) |
+| **14** | Original Language, Quality & Platform Skills | 07 | [Section 14 &rarr;](#14-original-language-quality-and-platform-skills-7-skills) |
 
 ---
 
-## Granular Skill Directory & Attribution Index (117 Skills)
+## Granular Skill Directory & Attribution Index (124 Skills)
 
 <details open>
 <summary><b>01. Token Efficiency and Context Economy (9 Skills)</b></summary>
@@ -516,6 +517,28 @@ Focus: Original skills by [Serion89](https://github.com/Serion89) for discipline
 | :--- | :--- | :--- |
 | `ml-engineering` | Leakage-safe splits, reproducible training, decision-aligned evaluation, rollout gates, and drift monitoring. | [Serion89](https://github.com/Serion89) |
 | `embedded-systems-engineering` | Firmware under real-time, memory, power, and sensor constraints, with safe states and hardware-in-the-loop tests. | [Serion89](https://github.com/Serion89) |
+
+</details>
+
+---
+
+## 14. Original Language, Quality and Platform Skills (7 Skills)
+
+<details open>
+<summary><b>14. Original Language, Quality and Platform Skills (7 Skills)</b></summary>
+<br>
+
+Focus: Original skills by [Serion89](https://github.com/Serion89) covering language idioms, concurrency, test reliability, authentication, dependency upgrades, and internationalization, areas that had no dedicated skill in this collection.
+
+| Skill | Purpose | Credit |
+| :--- | :--- | :--- |
+| `python-patterns` | Idiomatic Python: layout, precise typing, exception handling, async safety, logging, subprocess and path safety, pytest. | [Serion89](https://github.com/Serion89) |
+| `typescript-patterns` | Type-safe TypeScript and Node.js: strict config, narrowing over casting, discriminated unions, boundary validation, async and shutdown. | [Serion89](https://github.com/Serion89) |
+| `concurrency-debugging` | Diagnoses data races, lost updates, deadlocks, and async reentrancy, then fixes the design with deterministic regression tests. | [Serion89](https://github.com/Serion89) |
+| `flaky-test-triage` | Measures, classifies, and fixes nondeterministic tests; bisects order dependence; sets a quarantine policy with deadlines. | [Serion89](https://github.com/Serion89) |
+| `authentication-implementation` | Builds login and sessions correctly: Argon2id, secure cookies, PKCE, refresh rotation with reuse detection, safe password reset and MFA. | [Serion89](https://github.com/Serion89) |
+| `dependency-upgrade` | Plans major dependency and runtime upgrades: breaking-change review, characterization tests, staged upgrades, verification and rollout. | [Serion89](https://github.com/Serion89) |
+| `internationalization` | Externalized strings, CLDR plurals, Intl formatting, UTC time, logical CSS for RTL, text expansion, pseudo-localization testing. | [Serion89](https://github.com/Serion89) |
 
 </details>
 
