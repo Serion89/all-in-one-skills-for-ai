@@ -3,7 +3,7 @@
 <img src="assets/hero.svg" alt="All-In-One Skills For AI Banner" width="100%">
 
 <p align="center">
-  <a href="https://github.com/Serion89/all-in-one-skills-for-ai"><img src="https://img.shields.io/badge/skills-115%20verified-0d1117?style=flat-square&logo=git&logoColor=white&labelColor=161b22" alt="Skills"></a>
+  <a href="https://github.com/Serion89/all-in-one-skills-for-ai"><img src="https://img.shields.io/badge/skills-124%20verified-0d1117?style=flat-square&logo=git&logoColor=white&labelColor=161b22" alt="Skills"></a>
   <a href="https://agentskills.io"><img src="https://img.shields.io/badge/spec-agentskills.io-0d1117?style=flat-square&labelColor=161b22" alt="Spec"></a>
   <a href="#security--verification-standards"><img src="https://img.shields.io/badge/telemetry-zero-0d1117?style=flat-square&labelColor=161b22" alt="Telemetry"></a>
   <a href="#domain-navigation-matrix"><img src="https://img.shields.io/badge/domains-12%20specialized-0d1117?style=flat-square&labelColor=161b22" alt="Domains"></a>
@@ -11,7 +11,7 @@
   <a href="#license-and-attribution"><img src="https://img.shields.io/badge/license-MIT%20%2F%20Apache-0d1117?style=flat-square&labelColor=161b22" alt="License"></a>
 </p>
 
-A curated collection of 115 verified agent skills conforming to the open [Agent Skills Specification](https://agentskills.io). Compatible with Claude Code, Cursor, Windsurf, Antigravity, GitHub Copilot CLI, and Cline.
+A curated collection of 124 verified agent skills conforming to the open [Agent Skills Specification](https://agentskills.io). Compatible with Claude Code, Cursor, Windsurf, Antigravity, GitHub Copilot CLI, and Cline.
 
 [Environment Setup](#interactive-installation-guide) &bull; [Behavioral Comparison](#default-agent-vs-all-in-one-harness) &bull; [Execution Lifecycle](#agent-execution-lifecycle) &bull; [Operational Playbooks](#operational-playbooks) &bull; [Domain Index](#domain-navigation-matrix) &bull; [Maintainer](#project-maintainer)
 
@@ -27,7 +27,7 @@ Choose your target coding assistant below to copy the direct setup command:
 <summary><b>Claude Code (~/.claude/skills)</b></summary>
 <br>
 
-Installs all 115 skills globally for Claude Code CLI:
+Installs all 124 skills globally for Claude Code CLI:
 
 ```bash
 # Clone and copy into Claude Code global skills path
@@ -39,7 +39,7 @@ cp -r all-in-one-skills-for-ai/skills/* ~/.claude/skills/
 Verify in Claude Code:
 ```text
 /skills
-# Output: 115 loaded skills (caveman, ponytail, threat-modeling, hexagonal-architecture, etc.)
+# Output: 124 loaded skills (caveman, ponytail, threat-modeling, hexagonal-architecture, etc.)
 ```
 
 </details>
@@ -249,10 +249,11 @@ Preventing agents from importing heavy third-party libraries for simple algorith
 | **10** | Backend Architecture, Distributed Data & Search | 14 | [Section 10 &rarr;](#10-backend-architecture-distributed-data-and-search-14-skills) |
 | **11** | Defensive Cybersecurity, Threat Modeling & Safe Stress Testing | 08 | [Section 11 &rarr;](#11-defensive-cybersecurity-threat-modeling-and-safe-stress-testing-8-skills) |
 | **12** | DevOps, Cloud Infrastructure, Containers, SRE & Maintenance | 24 | [Section 12 &rarr;](#12-devops-cloud-infrastructure-containers-sre-and-maintenance-24-skills) |
+| **13** | Original Engineering Disciplines (by sahildark789) | 09 | [Section 13 &rarr;](#13-original-engineering-disciplines-across-software-systems-and-physical-engineering-9-skills) |
 
 ---
 
-## Granular Skill Directory & Attribution Index (115 Skills)
+## Granular Skill Directory & Attribution Index (124 Skills)
 
 <details open>
 <summary><b>01. Token Efficiency and Context Economy (9 Skills)</b></summary>
@@ -502,6 +503,28 @@ Focus: Infrastructure verification, production stability patterns, container har
 </details>
 
 ---
+
+## 13. Original Engineering Disciplines Across Software, Systems and Physical Engineering (9 Skills)
+
+<details open>
+<summary><b>13. Original Engineering Disciplines (9 Skills)</b></summary>
+<br>
+
+Focus: Original skills, authored by [sahildark789](https://github.com/sahildark789), that cover engineering beyond application code: routing across disciplines, software craft, systems, requirements, reliability, data, ML, embedded/hardware, and design review.
+
+| Skill | Purpose | Credit |
+| :--- | :--- | :--- |
+| `engineering-router` | Classifies an engineering task and selects the right discipline skills in a sensible order. | [sahildark789](https://github.com/sahildark789) |
+| `software-engineering-craft` | End-to-end workflow for application code: understand, define, implement, test, verify, and hand off. | [sahildark789](https://github.com/sahildark789) |
+| `systems-engineering` | Multi-subsystem method: boundaries, requirement allocation, interface contracts, budgets, trade studies, and verification planning. | [sahildark789](https://github.com/sahildark789) |
+| `requirements-engineering` | Turns vague requests into measurable, testable requirements and executable acceptance criteria. | [sahildark789](https://github.com/sahildark789) |
+| `reliability-engineering` | SLIs/SLOs, FMEA, graceful degradation, budget-based alerting, and planned fault verification. | [sahildark789](https://github.com/sahildark789) |
+| `data-engineering` | Idempotent pipelines, data contracts, time semantics, quality gates, and safe backfills. | [sahildark789](https://github.com/sahildark789) |
+| `ml-engineering` | Leakage-safe splits, reproducible training, decision-aligned evaluation, rollout gates, and drift monitoring. | [sahildark789](https://github.com/sahildark789) |
+| `embedded-systems-engineering` | Firmware under real-time, memory, power, and sensor constraints, with safe states and hardware-in-the-loop tests. | [sahildark789](https://github.com/sahildark789) |
+| `engineering-design-review` | Discipline-neutral design review with severity-ranked findings and a go/no-go recommendation. | [sahildark789](https://github.com/sahildark789) |
+
+</details>
 
 ## Security & Verification Standards
 
