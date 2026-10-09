@@ -3,7 +3,7 @@ name: embedded-systems-engineering
 description: Embedded and hardware-adjacent engineering for firmware on microcontrollers, sensor and actuator interfaces, and board-level integration - handle hard real-time timing, interrupts and concurrency, memory and power budgets, fault-tolerant safe states, and hardware-in-the-loop verification. Use when writing or reviewing firmware, drivers, control loops, or code that must interact correctly with physical signals.
 license: MIT
 metadata:
-  author: sahildark789
+  author: Serion89
   version: "1.0.0"
 ---
 

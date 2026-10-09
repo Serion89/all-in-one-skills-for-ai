@@ -3,7 +3,7 @@ name: ml-engineering
 description: Machine learning engineering from data to production - frame the problem and a baseline, prevent leakage in data splits, make training reproducible, evaluate against the decision that will be made, define offline and online acceptance gates, and monitor drift and degradation after deploy. Use when training, evaluating, shipping, or maintaining a predictive or generative model within a product or pipeline.
 license: MIT
 metadata:
-  author: sahildark789
+  author: Serion89
   version: "1.0.0"
 ---
 
