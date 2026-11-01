@@ -3,7 +3,7 @@
 <img src="assets/hero.svg" alt="All-In-One Skills For AI Banner" width="100%">
 
 <p align="center">
-  <a href="https://github.com/Serion89/all-in-one-skills-for-ai"><img src="https://img.shields.io/badge/skills-124%20verified-0d1117?style=flat-square&logo=git&logoColor=white&labelColor=161b22" alt="Skills"></a>
+  <a href="https://github.com/Serion89/all-in-one-skills-for-ai"><img src="https://img.shields.io/badge/skills-125%20verified-0d1117?style=flat-square&logo=git&logoColor=white&labelColor=161b22" alt="Skills"></a>
   <a href="https://agentskills.io"><img src="https://img.shields.io/badge/spec-agentskills.io-0d1117?style=flat-square&labelColor=161b22" alt="Spec"></a>
   <a href="#security--verification-standards"><img src="https://img.shields.io/badge/telemetry-zero-0d1117?style=flat-square&labelColor=161b22" alt="Telemetry"></a>
   <a href="#domain-navigation-matrix"><img src="https://img.shields.io/badge/domains-12%20specialized-0d1117?style=flat-square&labelColor=161b22" alt="Domains"></a>
@@ -11,7 +11,7 @@
   <a href="#license-and-attribution"><img src="https://img.shields.io/badge/license-MIT%20%2F%20Apache-0d1117?style=flat-square&labelColor=161b22" alt="License"></a>
 </p>
 
-A curated collection of 124 verified agent skills conforming to the open [Agent Skills Specification](https://agentskills.io). Compatible with Claude Code, Cursor, Windsurf, Antigravity, GitHub Copilot CLI, and Cline.
+A curated collection of 125 verified agent skills conforming to the open [Agent Skills Specification](https://agentskills.io). Compatible with Claude Code, Cursor, Windsurf, Antigravity, GitHub Copilot CLI, and Cline.
 
 [Environment Setup](#interactive-installation-guide) &bull; [Behavioral Comparison](#default-agent-vs-all-in-one-harness) &bull; [Execution Lifecycle](#agent-execution-lifecycle) &bull; [Operational Playbooks](#operational-playbooks) &bull; [Domain Index](#domain-navigation-matrix) &bull; [Maintainer](#project-maintainer)
 
@@ -27,7 +27,7 @@ Choose your target coding assistant below to copy the direct setup command:
 <summary><b>Claude Code (~/.claude/skills)</b></summary>
 <br>
 
-Installs all 124 skills globally for Claude Code CLI:
+Installs all 125 skills globally for Claude Code CLI:
 
 ```bash
 # Clone and copy into Claude Code global skills path
@@ -39,7 +39,7 @@ cp -r all-in-one-skills-for-ai/skills/* ~/.claude/skills/
 Verify in Claude Code:
 ```text
 /skills
-# Output: 124 loaded skills (caveman, ponytail, threat-modeling, hexagonal-architecture, etc.)
+# Output: 125 loaded skills (caveman, ponytail, threat-modeling, hexagonal-architecture, etc.)
 ```
 
 </details>
@@ -250,11 +250,11 @@ Preventing agents from importing heavy third-party libraries for simple algorith
 | **11** | Defensive Cybersecurity, Threat Modeling & Safe Stress Testing | 08 | [Section 11 &rarr;](#11-defensive-cybersecurity-threat-modeling-and-safe-stress-testing-8-skills) |
 | **12** | DevOps, Cloud Infrastructure, Containers, SRE & Maintenance | 24 | [Section 12 &rarr;](#12-devops-cloud-infrastructure-containers-sre-and-maintenance-24-skills) |
 | **13** | Original Engineering Disciplines: ML & Embedded Systems | 02 | [Section 13 &rarr;](#13-original-engineering-disciplines-ml-and-embedded-systems-2-skills) |
-| **14** | Original Language, Quality & Platform Skills | 07 | [Section 14 &rarr;](#14-original-language-quality-and-platform-skills-7-skills) |
+| **14** | Original Language, Quality & Platform Skills | 08 | [Section 14 &rarr;](#14-original-language-quality-and-platform-skills-8-skills) |
 
 ---
 
-## Granular Skill Directory & Attribution Index (124 Skills)
+## Granular Skill Directory & Attribution Index (125 Skills)
 
 <details open>
 <summary><b>01. Token Efficiency and Context Economy (9 Skills)</b></summary>
@@ -522,13 +522,13 @@ Focus: Original skills by [Serion89](https://github.com/Serion89) for discipline
 
 ---
 
-## 14. Original Language, Quality and Platform Skills (7 Skills)
+## 14. Original Language, Quality and Platform Skills (8 Skills)
 
 <details open>
-<summary><b>14. Original Language, Quality and Platform Skills (7 Skills)</b></summary>
+<summary><b>14. Original Language, Quality and Platform Skills (8 Skills)</b></summary>
 <br>
 
-Focus: Original skills by [Serion89](https://github.com/Serion89) covering language idioms, concurrency, test reliability, authentication, dependency upgrades, and internationalization, areas that had no dedicated skill in this collection.
+Focus: Original skills by [Serion89](https://github.com/Serion89) covering language idioms, concurrency, test reliability, adversarial project review, authentication, dependency upgrades, and internationalization, areas that had no dedicated skill in this collection.
 
 | Skill | Purpose | Credit |
 | :--- | :--- | :--- |
@@ -539,6 +539,7 @@ Focus: Original skills by [Serion89](https://github.com/Serion89) covering langu
 | `authentication-implementation` | Builds login and sessions correctly: Argon2id, secure cookies, PKCE, refresh rotation with reuse detection, safe password reset and MFA. | [Serion89](https://github.com/Serion89) |
 | `dependency-upgrade` | Plans major dependency and runtime upgrades: breaking-change review, characterization tests, staged upgrades, verification and rollout. | [Serion89](https://github.com/Serion89) |
 | `internationalization` | Externalized strings, CLDR plurals, Intl formatting, UTC time, logical CSS for RTL, text expansion, pseudo-localization testing. | [Serion89](https://github.com/Serion89) |
+| `hates-you` | Hostile adversarial review: acts as the rival of the project and its owner, attacks it through math, code, QA, gamer, security, performance, UX and ops lenses, and reports every flaw in a severity table with evidence and confidence. Read-only during review; reports first, fixes only when asked. Also available standalone: [Claude-hates-you-](https://github.com/Serion89/Claude-hates-you-). | [Serion89](https://github.com/Serion89) |
 
 </details>
 
