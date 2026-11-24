@@ -3,7 +3,7 @@
 <img src="assets/hero.svg" alt="All-In-One Skills For AI Banner" width="100%">
 
 <p align="center">
-  <a href="https://github.com/Serion89/all-in-one-skills-for-ai"><img src="https://img.shields.io/badge/skills-124%20verified-0d1117?style=flat-square&logo=git&logoColor=white&labelColor=161b22" alt="Skills"></a>
+  <a href="https://github.com/Serion89/all-in-one-skills-for-ai"><img src="https://img.shields.io/badge/skills-125%20verified-0d1117?style=flat-square&logo=git&logoColor=white&labelColor=161b22" alt="Skills"></a>
   <a href="https://agentskills.io"><img src="https://img.shields.io/badge/spec-agentskills.io-0d1117?style=flat-square&labelColor=161b22" alt="Spec"></a>
   <a href="#security--verification-standards"><img src="https://img.shields.io/badge/telemetry-zero-0d1117?style=flat-square&labelColor=161b22" alt="Telemetry"></a>
   <a href="#domain-navigation-matrix"><img src="https://img.shields.io/badge/domains-12%20specialized-0d1117?style=flat-square&labelColor=161b22" alt="Domains"></a>
@@ -11,7 +11,7 @@
   <a href="#license-and-attribution"><img src="https://img.shields.io/badge/license-MIT%20%2F%20Apache-0d1117?style=flat-square&labelColor=161b22" alt="License"></a>
 </p>
 
-A curated collection of 124 verified agent skills conforming to the open [Agent Skills Specification](https://agentskills.io). Compatible with Claude Code, Cursor, Windsurf, Antigravity, GitHub Copilot CLI, and Cline.
+A curated collection of 125 verified agent skills conforming to the open [Agent Skills Specification](https://agentskills.io). Compatible with Claude Code, Cursor, Windsurf, Antigravity, GitHub Copilot CLI, and Cline.
 
 [Environment Setup](#interactive-installation-guide) &bull; [Behavioral Comparison](#default-agent-vs-all-in-one-harness) &bull; [Execution Lifecycle](#agent-execution-lifecycle) &bull; [Operational Playbooks](#operational-playbooks) &bull; [Domain Index](#domain-navigation-matrix) &bull; [Maintainer](#project-maintainer)
 
@@ -27,7 +27,7 @@ Choose your target coding assistant below to copy the direct setup command:
 <summary><b>Claude Code (~/.claude/skills)</b></summary>
 <br>
 
-Installs all 124 skills globally for Claude Code CLI:
+Installs all 125 skills globally for Claude Code CLI:
 
 ```bash
 # Clone and copy into Claude Code global skills path
@@ -39,7 +39,7 @@ cp -r all-in-one-skills-for-ai/skills/* ~/.claude/skills/
 Verify in Claude Code:
 ```text
 /skills
-# Output: 124 loaded skills (caveman, ponytail, threat-modeling, hexagonal-architecture, etc.)
+# Output: 125 loaded skills (caveman, ponytail, threat-modeling, hexagonal-architecture, etc.)
 ```
 
 </details>
@@ -254,7 +254,7 @@ Preventing agents from importing heavy third-party libraries for simple algorith
 
 ---
 
-## Granular Skill Directory & Attribution Index (124 Skills)
+## Granular Skill Directory & Attribution Index (125 Skills)
 
 <details open>
 <summary><b>01. Token Efficiency and Context Economy (9 Skills)</b></summary>
@@ -277,7 +277,7 @@ Focus: Strip conversational padding, minimize token burn, and maintain optimal i
 </details>
 
 <details open>
-<summary><b>02. Minimalist Architecture and Anti-Over-Engineering (6 Skills)</b></summary>
+<summary><b>02. Minimalist Architecture and Anti-Over-Engineering (7 Skills)</b></summary>
 <br>
 
 Focus: Enforce YAGNI principles, prevent dependency sprawl, and produce surgical, atomic code modifications.
@@ -289,6 +289,7 @@ Focus: Enforce YAGNI principles, prevent dependency sprawl, and produce surgical
 | `ponytail-debt` | Evaluates architectural debt and premature abstractions prior to feature development. | [Dietrich Gebert](https://github.com/DietrichGebert/ponytail) |
 | `lean-build` | Minimalist build and bundle strategies prioritizing platform primitives and zero-dependency patterns. | [Dietrich Gebert](https://github.com/DietrichGebert/ponytail) |
 | `surgical-patch` | Restricts code changes to atomic, localized line ranges rather than full-file rewrites. | [Dietrich Gebert](https://github.com/DietrichGebert/ponytail) |
+| `smartenup` | Deterministic atomic code patcher for large files (>1,000 lines), nested template literals, and multi-region edits where standard diffs fail. | [ciel 441](https://github.com/Ciel-441/smartenup) |
 | `code-simplification` | Reduces code complexity, removes dead branches, and streamlines logic paths for readability. | [Addy Osmani](https://github.com/addyosmani/agent-skills) |
 
 </details>
@@ -573,4 +574,4 @@ Focus: Original skills by [Serion89](https://github.com/Serion89) covering langu
 
 This meta-repository is curated and maintained by [Sahil Bhatt (@Serion89)](https://github.com/Serion89).
 
-All upstream skills are credited to their respective original authors and maintainers under their open-source licenses (MIT / Apache 2.0). Individual copyright notices and licenses reside within their respective upstream repositories linked in the index above.
+All upstream skills are credited to their respective original authors and maintainers under their open-source licenses (MIT / Apache 2.0), including smartenup by [ciel 441](https://github.com/Ciel-441/smartenup). Individual copyright notices and licenses reside within their respective upstream repositories linked in the index above.
